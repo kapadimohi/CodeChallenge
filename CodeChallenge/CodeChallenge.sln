@@ -4,6 +4,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeChallenge.Disbursements
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeChallenge.DisbursementsVerifier.Api", "CodeChallenge.DisbursementsVerifier.Api\CodeChallenge.DisbursementsVerifier.Api.csproj", "{CF4203DE-1F36-4679-9503-0C4025A568C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeChallenge.DisbursementsVerifier.Repository", "CodeChallenge.DisbursementsVerifier.Repository\CodeChallenge.DisbursementsVerifier.Repository.csproj", "{FDDBECA0-F18F-4C14-9CCB-8D05F2654C43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeChallenge.DisbursementsVerifier.Repository.UnitTests", "CodeChallenge.DisbursementsVerifier.Repository.UnitTests\CodeChallenge.DisbursementsVerifier.Repository.UnitTests.csproj", "{BC1931EA-771A-436A-99B6-0E728E4C7E9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeChallenge.DisbursementsVerifier.Service", "CodeChallenge.DisbursementsVerifier.Service\CodeChallenge.DisbursementsVerifier.Service.csproj", "{0650905C-C35B-4243-B772-94657E3F0420}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeChallenge.DisbursementVerifier.Service.UnitTests", "CodeChallenge.DisbursementVerifier.Service.UnitTests\CodeChallenge.DisbursementVerifier.Service.UnitTests.csproj", "{268CB1EF-AA5C-40F4-942F-6E3A8FA2A4C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +26,21 @@ Global
 		{CF4203DE-1F36-4679-9503-0C4025A568C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF4203DE-1F36-4679-9503-0C4025A568C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF4203DE-1F36-4679-9503-0C4025A568C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDDBECA0-F18F-4C14-9CCB-8D05F2654C43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDDBECA0-F18F-4C14-9CCB-8D05F2654C43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDDBECA0-F18F-4C14-9CCB-8D05F2654C43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDDBECA0-F18F-4C14-9CCB-8D05F2654C43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC1931EA-771A-436A-99B6-0E728E4C7E9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC1931EA-771A-436A-99B6-0E728E4C7E9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC1931EA-771A-436A-99B6-0E728E4C7E9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC1931EA-771A-436A-99B6-0E728E4C7E9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0650905C-C35B-4243-B772-94657E3F0420}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0650905C-C35B-4243-B772-94657E3F0420}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0650905C-C35B-4243-B772-94657E3F0420}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0650905C-C35B-4243-B772-94657E3F0420}.Release|Any CPU.Build.0 = Release|Any CPU
+		{268CB1EF-AA5C-40F4-942F-6E3A8FA2A4C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{268CB1EF-AA5C-40F4-942F-6E3A8FA2A4C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{268CB1EF-AA5C-40F4-942F-6E3A8FA2A4C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{268CB1EF-AA5C-40F4-942F-6E3A8FA2A4C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
