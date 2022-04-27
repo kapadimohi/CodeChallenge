@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "1Yqy06BpPfcQfecJjCbTqvey0onYdv6KRbGbTlG9NGJ56npnnH+yhRtumUI9NJXW+1A1r6lxpgXNljVmKrBChQ==",
+  "dgSpecHash": "ZUixWt0e5C4YaIcT+tkWk02Uj8pJfXtEuexxST7kUxnGwHA73IXsssTOd94W+PHUHFAYx3oDWeDOQlG9cpUT2A==",
   "success": true,
   "projectFilePath": "/Users/mohit.kapadia/Documents/GitHub/CodeChallenge/CodeChallenge/CodeChallenge.DisbursementsVerifier.Api/CodeChallenge.DisbursementsVerifier.Api.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/mohit.kapadia/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/Users/mohit.kapadia/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/mohit.kapadia/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "/Users/mohit.kapadia/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "/Users/mohit.kapadia/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "/Users/mohit.kapadia/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
   "logs": []
 }
