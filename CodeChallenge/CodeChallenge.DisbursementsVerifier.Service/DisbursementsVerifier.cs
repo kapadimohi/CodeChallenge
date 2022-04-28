@@ -50,6 +50,6 @@ public class DisbursementsVerifier : IDisbursementsVerifier
                 TotalDisbursed = disbursement?.Disbursement ?? 0
             };
 
-        return query.ToList();
+        return query.OrderBy(q => q.EmployeeCode).ThenBy(q => q.Year).ThenBy(q => q.Quarter);
     }
 }
