@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using CodeChallenge.DisbursementsVerifier.Models;
 using CodeChallenge.DisbursementsVerifier.Repository;
+using CodeChallenge.DisbursementsVerifier.Repository.Interfaces;
 using CodeChallenge.DisbursementsVerifier.Service.Interfaces;
 using Moq;
 using Xunit;
@@ -45,7 +46,7 @@ public class DisbursementsVerifierTests
                 EmployeeCode = 1111,
                 QuarterEndingDate = new DateTime(2022, 03,31),
                 TotalSuperPayable = 100,
-                TotalOTE = 1000
+                TotalOte = 1000
             }
         };
         
@@ -71,11 +72,11 @@ public class DisbursementsVerifierTests
         };
 
         mockPayslipDataProcessor.Setup(m =>
-                m.Process(It.IsAny<IEnumerable<PayslipDetail>>(), It.IsAny<IEnumerable<PayCode>>()))
+                m.AggregateByEmployeeAndPeriod(It.IsAny<IEnumerable<PayslipDetail>>(), It.IsAny<IEnumerable<PayCode>>()))
             .Returns(stubProcessedPaySlipData);
         
         mockDisbursementsDataProcessor.Setup(m =>
-                m.Process(It.IsAny<IEnumerable<Disbursement>>()))
+                m.AggregteByEmployeeAndPeriod(It.IsAny<IEnumerable<Disbursement>>()))
             .Returns(stubProcessedDisbursementData);
         
         mockDataRepository.Setup(m => m.GetDisbursementsSuperData()).Returns(stubDisbursementSuperData);

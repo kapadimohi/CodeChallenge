@@ -30,7 +30,7 @@ public class DisbursementsDataProcessorTests
         };
 
         var processor = new DisbursementDataProcessor();
-        var processedDisbursementData = processor.Process(disbursements).ToList();
+        var processedDisbursementData = processor.AggregteByEmployeeAndPeriod(disbursements).ToList();
         
         Assert.Single(processedDisbursementData);
         Assert.Equal(2000, processedDisbursementData[0].Disbursement);

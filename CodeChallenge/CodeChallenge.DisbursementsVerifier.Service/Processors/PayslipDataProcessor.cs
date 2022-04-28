@@ -13,21 +13,24 @@ public class PayslipDataProcessor : IPayslipDataProcessor
         _superCalculator = superCalculator;
     }
 
-    public IEnumerable<ProcessedPayslipData> Process(IEnumerable<PayslipDetail> payslipDetails, IEnumerable<PayCode> payCodes)
+    public IEnumerable<ProcessedPayslipData> AggregateByEmployeeAndPeriod(IEnumerable<PayslipDetail> payslipDetails, IEnumerable<PayCode> payCodes)
     {
         var processedPayslipData = payslipDetails
             .GroupBy(p => new
             {
                 p.EmployeeCode, 
-                QuarterEndingDate = (p.PayslipEndDate.Date.AddDays(1 - p.PayslipEndDate.Day).AddMonths(3 - (p.PayslipEndDate.Month - 1) % 3).AddDays(-1))
+                QuarterEndingDate = p.PayslipEndDate.GetQuarterEndingDate()
             })
             .Select(p => 
                 new ProcessedPayslipData
                 {
-                    TotalOTE = p.Where(p => payCodes.Any(pc => pc.OTETreatment == "OTE" && p.Code == pc.Code)).Sum(l => l.Amount), 
+                    TotalOte = p.Where(p => payCodes.Any(pc => pc.OTETreatment == OTETreatment.OTE.ToString() && p.Code == pc.Code)).Sum(l => l.Amount), 
                     EmployeeCode = p.Key.EmployeeCode, 
                     QuarterEndingDate = p.Key.QuarterEndingDate,
-                    TotalSuperPayable = _superCalculator.CalculateSuperForGivenOTEAndPeriod(p.Where(p => payCodes.Any(pc => pc.OTETreatment == "OTE" && p.Code == pc.Code)).Sum(l => l.Amount),p.Key.QuarterEndingDate)
+                    TotalSuperPayable = _superCalculator.CalculateSuperForGivenOTEAndPeriod(
+                        p.Where(p => payCodes.Any(pc => pc.OTETreatment == OTETreatment.OTE.ToString() 
+                                                        && p.Code == pc.Code))
+                            .Sum(l => l.Amount),p.Key.QuarterEndingDate)
                 })
             .OrderBy(p => p.EmployeeCode)
             .ToList();

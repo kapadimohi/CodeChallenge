@@ -5,7 +5,7 @@ namespace CodeChallenge.DisbursementsVerifier.Service.Processors;
 
 public class DisbursementDataProcessor : IDisbursementDataProcessor
 {
-    public IEnumerable<ProcessedDisbursementData> Process(IEnumerable<Disbursement> disbursements)
+    public IEnumerable<ProcessedDisbursementData> AggregteByEmployeeAndPeriod(IEnumerable<Disbursement> disbursements)
     {
         var processedDisbursementData = disbursements.GroupBy(d => new
             {

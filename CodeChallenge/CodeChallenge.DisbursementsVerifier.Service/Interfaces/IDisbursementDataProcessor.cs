@@ -4,5 +4,5 @@ namespace CodeChallenge.DisbursementsVerifier.Service.Interfaces;
 
 public interface IDisbursementDataProcessor
 {
-    IEnumerable<ProcessedDisbursementData> Process(IEnumerable<Disbursement> disbursements);
+    IEnumerable<ProcessedDisbursementData> AggregteByEmployeeAndPeriod(IEnumerable<Disbursement> disbursements);
 }

@@ -49,10 +49,10 @@ public class PayslipDataProcessorTests
         };
         
         var processor = new PayslipDataProcessor(new SuperCalculator());
-        var processedPayslipData = processor.Process(payslipDetails, payCodes).ToList();
+        var processedPayslipData = processor.AggregateByEmployeeAndPeriod(payslipDetails, payCodes).ToList();
         
         Assert.Single(processedPayslipData);
-        Assert.Equal(600, processedPayslipData[0].TotalOTE);
+        Assert.Equal(600, processedPayslipData[0].TotalOte);
         Assert.Equal(2022, processedPayslipData[0].Year);
         Assert.Equal(1, processedPayslipData[0].Quarter);
         Assert.Equal(60, processedPayslipData[0].TotalSuperPayable);
@@ -96,10 +96,10 @@ public class PayslipDataProcessorTests
         };
         
         var processor = new PayslipDataProcessor(new SuperCalculator());
-        var processedPayslipData = processor.Process(payslipDetails, payCodes).ToList();
+        var processedPayslipData = processor.AggregateByEmployeeAndPeriod(payslipDetails, payCodes).ToList();
         
         Assert.Single(processedPayslipData);
-        Assert.Equal(0, processedPayslipData[0].TotalOTE);
+        Assert.Equal(0, processedPayslipData[0].TotalOte);
         Assert.Equal(2022, processedPayslipData[0].Year);
         Assert.Equal(1, processedPayslipData[0].Quarter);
         Assert.Equal(0, processedPayslipData[0].TotalSuperPayable);
@@ -167,21 +167,21 @@ public class PayslipDataProcessorTests
         };
         
         var processor = new PayslipDataProcessor(new SuperCalculator());
-        var processedPayslipData = processor.Process(payslipDetails, payCodes).ToList();
+        var processedPayslipData = processor.AggregateByEmployeeAndPeriod(payslipDetails, payCodes).ToList();
         
         Assert.Equal(4, processedPayslipData.Count);
         
-        Assert.Equal(300, processedPayslipData[0].TotalOTE);
+        Assert.Equal(300, processedPayslipData[0].TotalOte);
         Assert.Equal(2022, processedPayslipData[0].Year);
         Assert.Equal(1, processedPayslipData[0].Quarter);
         Assert.Equal(30, processedPayslipData[0].TotalSuperPayable);
         
-        Assert.Equal(300, processedPayslipData[2].TotalOTE);
+        Assert.Equal(300, processedPayslipData[2].TotalOte);
         Assert.Equal(2022, processedPayslipData[2].Year);
         Assert.Equal(3, processedPayslipData[2].Quarter);
         Assert.Equal(31.5M, processedPayslipData[2].TotalSuperPayable);
         
-        Assert.Equal(2000, processedPayslipData[3].TotalOTE);
+        Assert.Equal(2000, processedPayslipData[3].TotalOte);
         Assert.Equal(2022, processedPayslipData[3].Year);
         Assert.Equal(3, processedPayslipData[3].Quarter);
         Assert.Equal(210, processedPayslipData[3].TotalSuperPayable);

@@ -6,11 +6,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d1da6bee-00be-424b-a86c-a7ec93c6ff59" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository.UnitTests/DataParserTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository.UnitTests/LocalDataRepositoryTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/DataParser.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/ExcelDataAdapter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/Interfaces/IDataParser.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/Interfaces/IExcelDataAdapter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeChallenge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeChallenge/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api.UnitTests/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api.UnitTests/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/obj/CodeChallenge.DisbursementsVerifier.Api.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/obj/CodeChallenge.DisbursementsVerifier.Api.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/obj/Debug/net6.0/CodeChallenge.DisbursementsVerifier.Api.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/obj/Debug/net6.0/CodeChallenge.DisbursementsVerifier.Api.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/obj/Debug/net6.0/CodeChallenge.DisbursementsVerifier.Api.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/obj/Debug/net6.0/CodeChallenge.DisbursementsVerifier.Api.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/DataRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/DataRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/IDataRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/IDataRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Models/DateTimeExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Models/DateTimeExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Models/PayCode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Models/PayCode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Models/ProcessedPayslipData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Models/ProcessedPayslipData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository.UnitTests/CodeChallenge.DisbursementsVerifier.Repository.UnitTests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository.UnitTests/CodeChallenge.DisbursementsVerifier.Repository.UnitTests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/CodeChallenge.DisbursementsVerifier.Repository.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/CodeChallenge.DisbursementsVerifier.Repository.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/DataRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/LocalDataRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/IDataRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/Interfaces/IDataRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/SampleSuperData.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service.UnitTests/DisbursementsDataProcessorTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service.UnitTests/DisbursementsDataProcessorTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service.UnitTests/DisbursementsVerifierTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service.UnitTests/DisbursementsVerifierTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service.UnitTests/PayslipDataProcessorTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service.UnitTests/PayslipDataProcessorTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/Calculators/SuperCalculator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/Calculators/SuperCalculator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/DisbursementsVerifier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/DisbursementsVerifier.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/Interfaces/IDisbursementDataProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/Interfaces/IDisbursementDataProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/Interfaces/IPayslipDataProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/Interfaces/IPayslipDataProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/Processors/DisbursementDataProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/Processors/DisbursementDataProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/Processors/PayslipDataProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/Processors/PayslipDataProcessor.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,12 +51,14 @@
     <setting file="file://$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service.UnitTests/SuperCalculatorTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/793a767fe12b46ae8c83756e0b9f75c844200/8b/2e15a0c8/AbstractInvocation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8517f607c12a4b508364c3f896f0fe6f11da8/ba/f39202d0/Assert.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/86accab51324475881a60af4440a78ce2dde00/91/e21ae12c/DataRow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/134622bcf8ad016d3faf7776eb0457b76a5798c537458aa82651ab2cee6e1/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/34e887b2733e1da4a9628aaff03189d4bd7842f082e12097939f9428535c39/CastleProxyFactory.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/73861f289e3ca779abb49afbe7823847e8b1ed14a40f5fa782ba6ad853d8/RuntimeHelpers.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7fe79a50e72b83d86bcb87e6e177c55c4e64595e94e8591a17f6ec586ffc9f71/Interop.IOErrors.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/938451c5b6533f9735e3b49a511f654a35443bc73eecd2d434f10d8c2ba1a/Encoding.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a189637ee62ade5a353f967e8f9214fb749ea16c9375dc6d2b6df37388f81/CastHelpers.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b5df589772ef42a779538d975451bd4a929d232cb22c7c6065c61913df9939b/IndexOutOfRangeException.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -92,7 +121,8 @@
       <option name="presentableId" value="Default" />
       <updated>1651060955908</updated>
       <workItem from="1651060976965" duration="7611000" />
-      <workItem from="1651071786033" duration="30329000" />
+      <workItem from="1651071786033" duration="30843000" />
+      <workItem from="1651157832935" duration="6573000" />
     </task>
     <servers />
   </component>

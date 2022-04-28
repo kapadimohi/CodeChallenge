@@ -5,3 +5,9 @@ public record PayCode
     public string Code { get; set; }
     public string OTETreatment { get; set; }
 }
+
+public enum OTETreatment
+{
+    OTE,
+    NotOTE
+}

@@ -1,4 +1,5 @@
 using CodeChallenge.DisbursementsVerifier.Repository;
+using CodeChallenge.DisbursementsVerifier.Repository.Interfaces;
 using CodeChallenge.DisbursementsVerifier.Service;
 using CodeChallenge.DisbursementsVerifier.Service.Calculators;
 using CodeChallenge.DisbursementsVerifier.Service.Interfaces;
@@ -19,7 +20,7 @@ builder.Services.AddSingleton<IDisbursementsVerifier, DisbursementsVerifier>();
 builder.Services.AddSingleton<IDisbursementDataProcessor, DisbursementDataProcessor>();
 builder.Services.AddSingleton<IPayslipDataProcessor, PayslipDataProcessor>();
 builder.Services.AddSingleton<ISuperCalculator, SuperCalculator>();
-builder.Services.AddSingleton<IDataRepository, DataRepository>();
+builder.Services.AddSingleton<IDataRepository, LocalDataRepository>();
 
 
 var app = builder.Build();

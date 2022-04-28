@@ -4,5 +4,5 @@ namespace CodeChallenge.DisbursementsVerifier.Service.Interfaces;
 
 public interface IPayslipDataProcessor
 {
-    IEnumerable<ProcessedPayslipData> Process(IEnumerable<PayslipDetail> payslipDetails, IEnumerable<PayCode> payCodes);
+    IEnumerable<ProcessedPayslipData> AggregateByEmployeeAndPeriod(IEnumerable<PayslipDetail> payslipDetails, IEnumerable<PayCode> payCodes);
 }

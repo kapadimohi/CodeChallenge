@@ -1,5 +1,5 @@
 ﻿using CodeChallenge.DisbursementsVerifier.Models;
-using CodeChallenge.DisbursementsVerifier.Repository;
+using CodeChallenge.DisbursementsVerifier.Repository.Interfaces;
 using CodeChallenge.DisbursementsVerifier.Service.Interfaces;
 
 namespace CodeChallenge.DisbursementsVerifier.Service;
@@ -23,14 +23,14 @@ public class DisbursementsVerifier : IDisbursementsVerifier
     {
         var disbursementsSuperData = _dataRepository.GetDisbursementsSuperData();
 
-        var processedPayslipData = _payslipDataProcessor.Process(disbursementsSuperData.PayslipDetails, disbursementsSuperData.PayCodes);
+        var processedPayslipData = _payslipDataProcessor.AggregateByEmployeeAndPeriod(disbursementsSuperData.PayslipDetails, disbursementsSuperData.PayCodes);
 
-        var processedDisbursementData = _disbursementDataProcessor.Process(disbursementsSuperData.Disbursements);
+        var processedDisbursementData = _disbursementDataProcessor.AggregteByEmployeeAndPeriod(disbursementsSuperData.Disbursements);
 
-        return ProcessPayslipAndDisbursementData(processedPayslipData, processedDisbursementData);
+        return CombinePayslipAndDisbursementData(processedPayslipData, processedDisbursementData);
     }
-
-    private static IEnumerable<VerificationResult> ProcessPayslipAndDisbursementData(IEnumerable<ProcessedPayslipData> processedPayslipData,
+    
+    private static IEnumerable<VerificationResult> CombinePayslipAndDisbursementData(IEnumerable<ProcessedPayslipData> processedPayslipData,
         IEnumerable<ProcessedDisbursementData> processedDisbursementData)
     {
         var query =
@@ -45,7 +45,7 @@ public class DisbursementsVerifier : IDisbursementsVerifier
                 EmployeeCode = paySlipData.EmployeeCode,
                 Year = paySlipData.Year,
                 Quarter = paySlipData.Quarter,
-                TotalOrdinaryTimeEarnings = paySlipData.TotalOTE,
+                TotalOrdinaryTimeEarnings = paySlipData.TotalOte,
                 TotalSuperPayable = paySlipData.TotalSuperPayable,
                 TotalDisbursed = disbursement?.Disbursement ?? 0
             };

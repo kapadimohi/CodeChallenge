@@ -163,6 +163,10 @@
               "target": "Package",
               "version": "[3.6.0, )"
             },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[7.0.0-preview.3.22175.4, )"
+            },
             "System.Text.Encoding.CodePages": {
               "target": "Package",
               "version": "[7.0.0-preview.3.22175.4, )"

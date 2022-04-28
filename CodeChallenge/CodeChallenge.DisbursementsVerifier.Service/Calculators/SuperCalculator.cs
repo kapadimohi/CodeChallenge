@@ -9,7 +9,7 @@ public class SuperCalculator : ISuperCalculator
     }
 
     /// <summary>
-    /// Actual Super rates for reference purposes
+    /// Actual Super rates for reference
     /// 1 July 2002 – 30 June 2013	9.00%
     /// 1 July 2013 – 30 June 2014	9.25%
     /// 1 July 2014 – 30 June 2021	9.50%

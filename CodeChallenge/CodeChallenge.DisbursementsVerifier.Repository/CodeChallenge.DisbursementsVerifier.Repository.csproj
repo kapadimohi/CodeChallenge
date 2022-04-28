@@ -12,6 +12,7 @@
 
     <ItemGroup>
       <PackageReference Include="ExcelDataReader.DataSet" Version="3.6.0" />
+      <PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0-preview.3.22175.4" />
       <PackageReference Include="System.Text.Encoding.CodePages" Version="7.0.0-preview.3.22175.4" />
     </ItemGroup>
 
@@ -21,9 +22,6 @@
 
     <ItemGroup>
       <None Remove="SampleSuperData.xlsx" />
-      <Resource Include="SampleSuperData.xlsx">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </Resource>
     </ItemGroup>
 
 </Project>

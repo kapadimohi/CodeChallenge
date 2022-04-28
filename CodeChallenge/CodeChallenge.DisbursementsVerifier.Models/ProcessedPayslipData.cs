@@ -6,6 +6,6 @@ public record ProcessedPayslipData
     public DateTime QuarterEndingDate { get; set; }
     public int Year => QuarterEndingDate.Year;
     public int Quarter => QuarterEndingDate.GetQuarter();
-    public decimal TotalOTE { get; set; }
+    public decimal TotalOte { get; set; }
     public decimal TotalSuperPayable { get; set; }
 }
