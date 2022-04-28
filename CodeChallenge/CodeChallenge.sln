@@ -10,7 +10,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeChallenge.Disbursements
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeChallenge.DisbursementsVerifier.Service", "CodeChallenge.DisbursementsVerifier.Service\CodeChallenge.DisbursementsVerifier.Service.csproj", "{0650905C-C35B-4243-B772-94657E3F0420}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeChallenge.DisbursementVerifier.Service.UnitTests", "CodeChallenge.DisbursementVerifier.Service.UnitTests\CodeChallenge.DisbursementVerifier.Service.UnitTests.csproj", "{268CB1EF-AA5C-40F4-942F-6E3A8FA2A4C2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeChallenge.DisbursementsVerifier.Service.UnitTests", "CodeChallenge.DisbursementsVerifier.Service.UnitTests\CodeChallenge.DisbursementsVerifier.Service.UnitTests.csproj", "{268CB1EF-AA5C-40F4-942F-6E3A8FA2A4C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeChallenge.DisbursementsVerifier.Models", "CodeChallenge.DisbursementsVerifier.Models\CodeChallenge.DisbursementsVerifier.Models.csproj", "{01E72E1B-90EC-4AC2-9031-A4F96C2EBD83}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,5 +44,9 @@ Global
 		{268CB1EF-AA5C-40F4-942F-6E3A8FA2A4C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{268CB1EF-AA5C-40F4-942F-6E3A8FA2A4C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{268CB1EF-AA5C-40F4-942F-6E3A8FA2A4C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01E72E1B-90EC-4AC2-9031-A4F96C2EBD83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01E72E1B-90EC-4AC2-9031-A4F96C2EBD83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01E72E1B-90EC-4AC2-9031-A4F96C2EBD83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01E72E1B-90EC-4AC2-9031-A4F96C2EBD83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

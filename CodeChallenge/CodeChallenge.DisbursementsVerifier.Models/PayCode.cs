@@ -1,4 +1,4 @@
-namespace CodeChallenge.DisbursementsVerifier.Service.Models;
+namespace CodeChallenge.DisbursementsVerifier.Models;
 
 public record PayCode
 {

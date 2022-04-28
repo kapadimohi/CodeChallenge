@@ -6,16 +6,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d1da6bee-00be-424b-a86c-a7ec93c6ff59" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/IDataRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/Calculators/ISuperCalculator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/Calculators/SuperCalculator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/Models/Disbursement.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/Models/PayCode.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/Models/PayslipDetail.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/Models/VerificationResult.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Models/DateTimeExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Models/DisbursementPeriod.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Models/DisbursementSuperData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Models/ProcessedDisbursementData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Models/ProcessedPayslipData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/DataRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service.UnitTests/DateTimeExtensionTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service.UnitTests/DisbursementsDataProcessorTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service.UnitTests/PayslipDataProcessorTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/DisbursementsVerifier.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/Interfaces/DisbursementDataProcessor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/Interfaces/IDisbursementDataProcessor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/Interfaces/IDisbursementsVerifier.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/Interfaces/IPayslipDataProcessor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/PayslipDataProcessor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeChallenge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeChallenge/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/Controllers/WeatherForecastController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/Controllers/WeatherForecastController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementVerifier.Service.UnitTests/Calculators/SuperCalculatorTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service.UnitTests/SuperCalculatorTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementVerifier.Service.UnitTests/CodeChallenge.DisbursementVerifier.Service.UnitTests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service.UnitTests/CodeChallenge.DisbursementsVerifier.Service.UnitTests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api.UnitTests/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api.UnitTests/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/CodeChallenge.DisbursementsVerifier.Repository.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/CodeChallenge.DisbursementsVerifier.Repository.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/IDataRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/IDataRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/Class1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/CodeChallenge.DisbursementsVerifier.Service.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/CodeChallenge.DisbursementsVerifier.Service.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/Models/Disbursement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Models/Disbursement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/Models/PayCode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Models/PayCode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/Models/PayslipDetail.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Models/PayslipDetail.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/Models/VerificationResult.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Models/VerificationResult.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeChallenge.sln" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +44,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service.UnitTests/SuperCalculatorTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8517f607c12a4b508364c3f896f0fe6f11da8/ba/f39202d0/Assert.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/134622bcf8ad016d3faf7776eb0457b76a5798c537458aa82651ab2cee6e1/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -37,14 +62,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.CodeChallenge.DisbursementsVerifier.Api">
     <configuration name="CodeChallenge.DisbursementsVerifier.Api" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/CodeChallenge.DisbursementsVerifier.Api.csproj" />
@@ -86,6 +111,7 @@
       <option name="presentableId" value="Default" />
       <updated>1651060955908</updated>
       <workItem from="1651060976965" duration="7611000" />
+      <workItem from="1651071786033" duration="16475000" />
     </task>
     <servers />
   </component>
@@ -112,17 +138,17 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/Calculators/SuperCalculator.cs</url>
-          <line>24</line>
-          <properties documentPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/Calculators/SuperCalculator.cs" initialLine="24" containingFunctionPresentation="method 'GetSuperRateForGivenPeriod'">
+          <url>file://$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service.UnitTests/PayslipDataProcessorTests.cs</url>
+          <line>52</line>
+          <properties documentPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service.UnitTests/PayslipDataProcessorTests.cs" initialLine="52" containingFunctionPresentation="method 'GivenAllPayslipDataIsOteApplicable_WhenPayslipDataProcessorIsInvoked_ThenDataIsProcessedIntroAppropriateFormat'">
             <startOffsets>
-              <option value="863" />
+              <option value="1746" />
             </startOffsets>
             <endOffsets>
-              <option value="902" />
+              <option value="1782" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="2" />
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

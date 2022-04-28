@@ -2,7 +2,7 @@ using System;
 using CodeChallenge.DisbursementsVerifier.Service.Calculators;
 using Xunit;
 
-namespace CodeChallenge.DisbursementVerifier.Service.UnitTests.Calculators;
+namespace CodeChallenge.DisbursementVerifier.Service.UnitTests;
 
 public class SuperCalculatorTests
 {

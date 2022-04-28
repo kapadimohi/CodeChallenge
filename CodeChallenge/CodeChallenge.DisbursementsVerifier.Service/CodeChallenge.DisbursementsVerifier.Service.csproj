@@ -6,4 +6,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\CodeChallenge.DisbursementsVerifier.Repository\CodeChallenge.DisbursementsVerifier.Repository.csproj" />
+    </ItemGroup>
+
 </Project>
