@@ -27,10 +27,10 @@ public class DisbursementsVerifier : IDisbursementsVerifier
 
         var processedDisbursementData = _disbursementDataProcessor.AggregteByEmployeeAndPeriod(disbursementsSuperData.Disbursements);
 
-        return CombinePayslipAndDisbursementData(processedPayslipData, processedDisbursementData);
+        return MergePayslipAndDisbursementData(processedPayslipData, processedDisbursementData);
     }
     
-    private static IEnumerable<VerificationResult> CombinePayslipAndDisbursementData(IEnumerable<ProcessedPayslipData> processedPayslipData,
+    private static IEnumerable<VerificationResult> MergePayslipAndDisbursementData(IEnumerable<ProcessedPayslipData> processedPayslipData,
         IEnumerable<ProcessedDisbursementData> processedDisbursementData)
     {
         var query =

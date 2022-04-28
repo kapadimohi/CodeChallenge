@@ -25,7 +25,6 @@ builder.Services.AddSingleton<IDataParser, DataParser>();
 builder.Services.AddSingleton<IDataRepository, LocalDataRepository>();
 builder.Services.AddSingleton<IExcelDataAdapter, ExcelDataAdapter>();
 
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
