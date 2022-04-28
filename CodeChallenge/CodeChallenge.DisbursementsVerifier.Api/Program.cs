@@ -21,6 +21,9 @@ builder.Services.AddSingleton<IDisbursementDataProcessor, DisbursementDataProces
 builder.Services.AddSingleton<IPayslipDataProcessor, PayslipDataProcessor>();
 builder.Services.AddSingleton<ISuperCalculator, SuperCalculator>();
 builder.Services.AddSingleton<IDataRepository, LocalDataRepository>();
+builder.Services.AddSingleton<IDataParser, DataParser>();
+builder.Services.AddSingleton<IDataRepository, LocalDataRepository>();
+builder.Services.AddSingleton<IExcelDataAdapter, ExcelDataAdapter>();
 
 
 var app = builder.Build();
