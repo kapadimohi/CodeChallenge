@@ -4,6 +4,7 @@ using System.Linq;
 using CodeChallenge.DisbursementsVerifier.Models;
 using CodeChallenge.DisbursementsVerifier.Service;
 using CodeChallenge.DisbursementsVerifier.Service.Calculators;
+using CodeChallenge.DisbursementsVerifier.Service.Processors;
 using Xunit;
 
 namespace CodeChallenge.DisbursementVerifier.Service.UnitTests;

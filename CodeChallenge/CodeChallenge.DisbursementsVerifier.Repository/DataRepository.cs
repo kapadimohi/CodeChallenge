@@ -1,4 +1,5 @@
 using CodeChallenge.DisbursementsVerifier.Models;
+using ExcelDataReader;
 
 namespace CodeChallenge.DisbursementsVerifier.Repository;
 
@@ -8,29 +9,33 @@ public class DataRepository : IDataRepository
     {
         return new List<PayslipDetail>()
         {
-            new PayslipDetail()
+            new()
             {
-                Amount = 200,
-                Code = "10 - Annual Lve",
+                Amount = 2000,
+                Code = "1 - Normal",
                 EmployeeCode = 1165,
                 PayslipId = Guid.NewGuid(),
-                PayslipEndDate = DateTime.Now.AddMonths(1).AddDays(-1),
+                PayslipEndDate = new DateTime(2022, 01,31),
+            },
+            new()
+            {
+                Amount = 10000,
+                Code = "1 - Normal",
+                EmployeeCode = 1165,
+                PayslipId = Guid.NewGuid(),
+                PayslipEndDate = new DateTime(2022, 05,30),
             }
         };
     }
 
     public IEnumerable<Disbursement> GetDisbursements()
     {
-        var currentDate = DateTime.Now;
-
         return new List<Disbursement>()
         {
-            new Disbursement()
+            new()
             {
-                Amount = 100,
-                PaymentDate = currentDate,
-                PeriodFromDate = new DateTime(currentDate.Year, currentDate.Month, 01),
-                PeriodToDate = currentDate.AddMonths(1).AddDays(-1),
+                Amount = 200,
+                PaymentDate = new DateTime(2022, 02,25),
                 EmployeeCode = 1165
             }
         };
@@ -60,6 +65,8 @@ public class DataRepository : IDataRepository
 
     public DisbursementSuperData GetDisbursementsSuperData()
     {
+        RetrieveRawDataFromExcel();
+        
         var disbursements = GetDisbursements();
         var payCodes = GetPayCodes();
         var payslipDetails = GetPayslipDetails();
@@ -70,5 +77,20 @@ public class DataRepository : IDataRepository
             PayCodes = payCodes,
             PayslipDetails = payslipDetails
         };
+    }
+
+
+    private void RetrieveRawDataFromExcel()
+    {
+        using (var stream = File.Open("SampleSuperData.xlsx", FileMode.Open, FileAccess.Read))
+        {
+            using (var reader = ExcelReaderFactory.CreateReader(stream))
+            {
+                var result = reader.AsDataSet();
+
+                // The result of each spreadsheet is in result.Tables
+            }
+        }
+
     }
 }

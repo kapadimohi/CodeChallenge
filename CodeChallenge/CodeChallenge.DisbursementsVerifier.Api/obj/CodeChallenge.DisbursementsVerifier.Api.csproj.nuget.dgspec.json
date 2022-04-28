@@ -25,7 +25,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/Users/mohit.kapadia/Documents/GitHub/CodeChallenge/CodeChallenge/CodeChallenge.DisbursementsVerifier.Service/CodeChallenge.DisbursementsVerifier.Service.csproj": {
+                "projectPath": "/Users/mohit.kapadia/Documents/GitHub/CodeChallenge/CodeChallenge/CodeChallenge.DisbursementsVerifier.Service/CodeChallenge.DisbursementsVerifier.Service.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -57,6 +61,180 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/mohit.kapadia/Documents/GitHub/CodeChallenge/CodeChallenge/CodeChallenge.DisbursementsVerifier.Models/CodeChallenge.DisbursementsVerifier.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/mohit.kapadia/Documents/GitHub/CodeChallenge/CodeChallenge/CodeChallenge.DisbursementsVerifier.Models/CodeChallenge.DisbursementsVerifier.Models.csproj",
+        "projectName": "CodeChallenge.DisbursementsVerifier.Models",
+        "projectPath": "/Users/mohit.kapadia/Documents/GitHub/CodeChallenge/CodeChallenge/CodeChallenge.DisbursementsVerifier.Models/CodeChallenge.DisbursementsVerifier.Models.csproj",
+        "packagesPath": "/Users/mohit.kapadia/.nuget/packages/",
+        "outputPath": "/Users/mohit.kapadia/Documents/GitHub/CodeChallenge/CodeChallenge/CodeChallenge.DisbursementsVerifier.Models/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/mohit.kapadia/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/mohit.kapadia/Documents/GitHub/CodeChallenge/CodeChallenge/CodeChallenge.DisbursementsVerifier.Repository/CodeChallenge.DisbursementsVerifier.Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/mohit.kapadia/Documents/GitHub/CodeChallenge/CodeChallenge/CodeChallenge.DisbursementsVerifier.Repository/CodeChallenge.DisbursementsVerifier.Repository.csproj",
+        "projectName": "CodeChallenge.DisbursementsVerifier.Repository",
+        "projectPath": "/Users/mohit.kapadia/Documents/GitHub/CodeChallenge/CodeChallenge/CodeChallenge.DisbursementsVerifier.Repository/CodeChallenge.DisbursementsVerifier.Repository.csproj",
+        "packagesPath": "/Users/mohit.kapadia/.nuget/packages/",
+        "outputPath": "/Users/mohit.kapadia/Documents/GitHub/CodeChallenge/CodeChallenge/CodeChallenge.DisbursementsVerifier.Repository/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/mohit.kapadia/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/mohit.kapadia/Documents/GitHub/CodeChallenge/CodeChallenge/CodeChallenge.DisbursementsVerifier.Models/CodeChallenge.DisbursementsVerifier.Models.csproj": {
+                "projectPath": "/Users/mohit.kapadia/Documents/GitHub/CodeChallenge/CodeChallenge/CodeChallenge.DisbursementsVerifier.Models/CodeChallenge.DisbursementsVerifier.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "ExcelDataReader.DataSet": {
+              "target": "Package",
+              "version": "[3.6.0, )"
+            },
+            "System.Text.Encoding.CodePages": {
+              "target": "Package",
+              "version": "[7.0.0-preview.3.22175.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/mohit.kapadia/Documents/GitHub/CodeChallenge/CodeChallenge/CodeChallenge.DisbursementsVerifier.Service/CodeChallenge.DisbursementsVerifier.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/mohit.kapadia/Documents/GitHub/CodeChallenge/CodeChallenge/CodeChallenge.DisbursementsVerifier.Service/CodeChallenge.DisbursementsVerifier.Service.csproj",
+        "projectName": "CodeChallenge.DisbursementsVerifier.Service",
+        "projectPath": "/Users/mohit.kapadia/Documents/GitHub/CodeChallenge/CodeChallenge/CodeChallenge.DisbursementsVerifier.Service/CodeChallenge.DisbursementsVerifier.Service.csproj",
+        "packagesPath": "/Users/mohit.kapadia/.nuget/packages/",
+        "outputPath": "/Users/mohit.kapadia/Documents/GitHub/CodeChallenge/CodeChallenge/CodeChallenge.DisbursementsVerifier.Service/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/mohit.kapadia/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/mohit.kapadia/Documents/GitHub/CodeChallenge/CodeChallenge/CodeChallenge.DisbursementsVerifier.Repository/CodeChallenge.DisbursementsVerifier.Repository.csproj": {
+                "projectPath": "/Users/mohit.kapadia/Documents/GitHub/CodeChallenge/CodeChallenge/CodeChallenge.DisbursementsVerifier.Repository/CodeChallenge.DisbursementsVerifier.Repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

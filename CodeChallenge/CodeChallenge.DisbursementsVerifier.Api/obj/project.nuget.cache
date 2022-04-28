@@ -1,15 +1,19 @@
 {
   "version": 2,
-  "dgSpecHash": "ZUixWt0e5C4YaIcT+tkWk02Uj8pJfXtEuexxST7kUxnGwHA73IXsssTOd94W+PHUHFAYx3oDWeDOQlG9cpUT2A==",
+  "dgSpecHash": "HbThWZNSg9K9EjgMKZ90zZiW7bonWXPI/JS61qVds07nooNiXE3zql0wVVGCRbgOD5x2gH0GXWv3ChJ4hzuG9g==",
   "success": true,
   "projectFilePath": "/Users/mohit.kapadia/Documents/GitHub/CodeChallenge/CodeChallenge/CodeChallenge.DisbursementsVerifier.Api/CodeChallenge.DisbursementsVerifier.Api.csproj",
   "expectedPackageFiles": [
+    "/Users/mohit.kapadia/.nuget/packages/exceldatareader/3.6.0/exceldatareader.3.6.0.nupkg.sha512",
+    "/Users/mohit.kapadia/.nuget/packages/exceldatareader.dataset/3.6.0/exceldatareader.dataset.3.6.0.nupkg.sha512",
     "/Users/mohit.kapadia/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "/Users/mohit.kapadia/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
     "/Users/mohit.kapadia/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "/Users/mohit.kapadia/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "/Users/mohit.kapadia/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
-    "/Users/mohit.kapadia/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+    "/Users/mohit.kapadia/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
+    "/Users/mohit.kapadia/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "/Users/mohit.kapadia/.nuget/packages/system.text.encoding.codepages/7.0.0-preview.3.22175.4/system.text.encoding.codepages.7.0.0-preview.3.22175.4.nupkg.sha512"
   ],
   "logs": []
 }

@@ -10,4 +10,20 @@
       <ProjectReference Include="..\CodeChallenge.DisbursementsVerifier.Models\CodeChallenge.DisbursementsVerifier.Models.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="ExcelDataReader.DataSet" Version="3.6.0" />
+      <PackageReference Include="System.Text.Encoding.CodePages" Version="7.0.0-preview.3.22175.4" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Sample Super Data.xlsx" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="SampleSuperData.xlsx" />
+      <Resource Include="SampleSuperData.xlsx">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Resource>
+    </ItemGroup>
+
 </Project>

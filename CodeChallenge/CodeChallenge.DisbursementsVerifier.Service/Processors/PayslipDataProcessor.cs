@@ -2,7 +2,7 @@ using CodeChallenge.DisbursementsVerifier.Models;
 using CodeChallenge.DisbursementsVerifier.Service.Calculators;
 using CodeChallenge.DisbursementsVerifier.Service.Interfaces;
 
-namespace CodeChallenge.DisbursementsVerifier.Service;
+namespace CodeChallenge.DisbursementsVerifier.Service.Processors;
 
 public class PayslipDataProcessor : IPayslipDataProcessor
 {
@@ -16,7 +16,6 @@ public class PayslipDataProcessor : IPayslipDataProcessor
     public IEnumerable<ProcessedPayslipData> Process(IEnumerable<PayslipDetail> payslipDetails, IEnumerable<PayCode> payCodes)
     {
         var processedPayslipData = payslipDetails
-            
             .GroupBy(p => new
             {
                 p.EmployeeCode, 
