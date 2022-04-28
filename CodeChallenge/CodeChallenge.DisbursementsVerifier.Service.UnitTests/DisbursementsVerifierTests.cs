@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using CodeChallenge.DisbursementsVerifier.Models;
+using CodeChallenge.DisbursementsVerifier.Models.Disbursements;
+using CodeChallenge.DisbursementsVerifier.Models.Payslips;
 using CodeChallenge.DisbursementsVerifier.Repository;
 using CodeChallenge.DisbursementsVerifier.Repository.Interfaces;
 using CodeChallenge.DisbursementsVerifier.Service.Interfaces;

@@ -1,6 +1,8 @@
 using System.Data;
 using System.Globalization;
 using CodeChallenge.DisbursementsVerifier.Models;
+using CodeChallenge.DisbursementsVerifier.Models.Disbursements;
+using CodeChallenge.DisbursementsVerifier.Models.Payslips;
 using CodeChallenge.DisbursementsVerifier.Repository.Interfaces;
 using Microsoft.Extensions.Logging;
 

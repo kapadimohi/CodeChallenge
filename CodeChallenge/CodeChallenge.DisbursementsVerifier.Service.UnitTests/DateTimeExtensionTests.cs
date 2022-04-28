@@ -1,5 +1,6 @@
 using System;
 using CodeChallenge.DisbursementsVerifier.Models;
+using CodeChallenge.DisbursementsVerifier.Models.Extensions;
 using Xunit;
 
 namespace CodeChallenge.DisbursementVerifier.Service.UnitTests;

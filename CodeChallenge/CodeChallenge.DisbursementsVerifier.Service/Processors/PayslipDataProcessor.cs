@@ -1,4 +1,6 @@
 using CodeChallenge.DisbursementsVerifier.Models;
+using CodeChallenge.DisbursementsVerifier.Models.Extensions;
+using CodeChallenge.DisbursementsVerifier.Models.Payslips;
 using CodeChallenge.DisbursementsVerifier.Service.Calculators;
 using CodeChallenge.DisbursementsVerifier.Service.Interfaces;
 

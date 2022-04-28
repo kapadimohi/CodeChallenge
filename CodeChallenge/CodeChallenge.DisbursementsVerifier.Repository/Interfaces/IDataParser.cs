@@ -1,5 +1,7 @@
 using System.Data;
 using CodeChallenge.DisbursementsVerifier.Models;
+using CodeChallenge.DisbursementsVerifier.Models.Disbursements;
+using CodeChallenge.DisbursementsVerifier.Models.Payslips;
 
 namespace CodeChallenge.DisbursementsVerifier.Repository.Interfaces;
 

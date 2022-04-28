@@ -1,4 +1,6 @@
-namespace CodeChallenge.DisbursementsVerifier.Models;
+using CodeChallenge.DisbursementsVerifier.Models.Extensions;
+
+namespace CodeChallenge.DisbursementsVerifier.Models.Payslips;
 
 public record ProcessedPayslipData
 {

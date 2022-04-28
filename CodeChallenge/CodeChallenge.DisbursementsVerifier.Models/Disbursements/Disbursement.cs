@@ -1,4 +1,4 @@
-namespace CodeChallenge.DisbursementsVerifier.Models;
+namespace CodeChallenge.DisbursementsVerifier.Models.Disbursements;
 
 public class Disbursement
 {

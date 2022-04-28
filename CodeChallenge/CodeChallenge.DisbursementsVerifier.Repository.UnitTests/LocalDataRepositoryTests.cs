@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using System.Data;
 using CodeChallenge.DisbursementsVerifier.Models;
+using CodeChallenge.DisbursementsVerifier.Models.Disbursements;
+using CodeChallenge.DisbursementsVerifier.Models.Payslips;
 using CodeChallenge.DisbursementsVerifier.Repository.Interfaces;
 using Moq;
 using Xunit;

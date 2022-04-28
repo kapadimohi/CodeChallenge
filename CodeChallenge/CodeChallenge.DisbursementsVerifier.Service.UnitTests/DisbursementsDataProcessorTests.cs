@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using CodeChallenge.DisbursementsVerifier.Models;
+using CodeChallenge.DisbursementsVerifier.Models.Disbursements;
 using CodeChallenge.DisbursementsVerifier.Service;
 using CodeChallenge.DisbursementsVerifier.Service.Processors;
 using Xunit;

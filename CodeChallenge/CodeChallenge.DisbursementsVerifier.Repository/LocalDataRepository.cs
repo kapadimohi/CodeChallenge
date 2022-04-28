@@ -1,4 +1,5 @@
 using CodeChallenge.DisbursementsVerifier.Models;
+using CodeChallenge.DisbursementsVerifier.Models.Disbursements;
 using CodeChallenge.DisbursementsVerifier.Repository.Interfaces;
 
 namespace CodeChallenge.DisbursementsVerifier.Repository;

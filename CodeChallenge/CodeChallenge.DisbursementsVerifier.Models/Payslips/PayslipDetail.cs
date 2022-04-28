@@ -1,4 +1,4 @@
-namespace CodeChallenge.DisbursementsVerifier.Models;
+namespace CodeChallenge.DisbursementsVerifier.Models.Payslips;
 
 public record PayslipDetail
 {

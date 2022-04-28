@@ -1,4 +1,6 @@
-namespace CodeChallenge.DisbursementsVerifier.Models;
+using CodeChallenge.DisbursementsVerifier.Models.Disbursements;
+
+namespace CodeChallenge.DisbursementsVerifier.Models.Extensions;
 
 public static class DateTimeExtensions
 {

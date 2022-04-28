@@ -1,4 +1,6 @@
 using CodeChallenge.DisbursementsVerifier.Models;
+using CodeChallenge.DisbursementsVerifier.Models.Disbursements;
+using CodeChallenge.DisbursementsVerifier.Models.Extensions;
 using CodeChallenge.DisbursementsVerifier.Service.Interfaces;
 
 namespace CodeChallenge.DisbursementsVerifier.Service.Processors;
