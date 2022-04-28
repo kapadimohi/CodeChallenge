@@ -33,6 +33,4 @@ public class LocalDataRepository : IDataRepository
             PayslipDetails = paySlipDetails
         };
     }
-
-    
 }

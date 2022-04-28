@@ -25,9 +25,9 @@ public static class DateTimeExtensions
     }
     
     /// <summary>
-    /// Get the quarter for a disbursement payment which is slightly different to a ordinary quarter
+    /// Get the quarter for a disbursement payment which is slightly different to an ordinary quarter
     /// Disbursements are allowed for up to 28 days after the end of a quarter
-    /// e.g. A payment made on April 26th, should be attributed to quarter 1
+    /// e.g. A payment made on April 26th, should be attributed to quarter 1 instead of quarter 2
     /// </summary>
     /// <param name="date"></param>
     /// <returns></returns>

@@ -22,6 +22,7 @@ public class VerifyDisbursementsController : ControllerBase
     [HttpGet(Name = "Verify")]
     public IEnumerable<VerificationResult> Verify()
     {
-        return _disbursementsVerifier.Verify();
+        var result = _disbursementsVerifier.Verify();
+        return result;
     }
 }
