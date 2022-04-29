@@ -21,9 +21,9 @@ public class DisbursementsVerifier : IDisbursementsVerifier
         _disbursementDataProcessor = disbursementDataProcessor;
     }
     
-    public async Task<IEnumerable<VerificationResult>> Verify()
+    public async Task<IEnumerable<VerificationResult>> Verify(string fileName)
     {
-        var disbursementsSuperData = await _dataRepository.GetDisbursementsSuperData();
+        var disbursementsSuperData = await _dataRepository.GetDisbursementsSuperData(fileName);
 
         var processedPayslipData =  _payslipDataProcessor.AggregateByEmployeeAndPeriod(disbursementsSuperData.PayslipDetails, disbursementsSuperData.PayCodes);
 

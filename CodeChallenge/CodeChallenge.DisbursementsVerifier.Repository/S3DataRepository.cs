@@ -11,6 +11,7 @@ public class S3DataRepository : IDataRepository
     private readonly IAmazonS3 _s3Client;
     private readonly IExcelDataStreamAdapter _excelDataStreamAdapter;
     private readonly IDataParser _dataParser;
+    private const string BucketName = "test";
 
     public S3DataRepository(IAmazonS3 s3Client,
         IExcelDataStreamAdapter excelDataStreamAdapter,
@@ -21,11 +22,11 @@ public class S3DataRepository : IDataRepository
         _dataParser = dataParser;
     }
 
-    public async Task<DisbursementSuperData> GetDisbursementsSuperData()
+    public async Task<DisbursementSuperData> GetDisbursementsSuperData(string fileName)
     {
         DataSet dataSet;
         
-        await using(var stream = await GetObjectStream("test", "SampleSuperData.xlsx"))
+        await using(var stream = await GetObjectStream(BucketName, fileName))
         {
             dataSet = await _excelDataStreamAdapter.GetData(stream);
         }
@@ -50,12 +51,10 @@ public class S3DataRepository : IDataRepository
             BucketName = bucketName,
         });
         
-        MemoryStream memoryStream = new MemoryStream();
+        var memoryStream = new MemoryStream();
 
-        using (Stream responseStream = response.ResponseStream)
-        {
-            responseStream.CopyTo(memoryStream);
-        }
+        await using var responseStream = response.ResponseStream;
+        await responseStream.CopyToAsync(memoryStream);
 
         return memoryStream;
     }

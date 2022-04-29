@@ -81,13 +81,13 @@ public class DisbursementsVerifierTests
                 m.AggregteByEmployeeAndPeriod(It.IsAny<IEnumerable<Disbursement>>()))
             .Returns(stubProcessedDisbursementData);
         
-        mockDataRepository.Setup(m => m.GetDisbursementsSuperData()).ReturnsAsync(stubDisbursementSuperData);
+        mockDataRepository.Setup(m => m.GetDisbursementsSuperData(It.IsAny<string>())).ReturnsAsync(stubDisbursementSuperData);
         
         var verifier = new DisbursementsVerifier.Service.DisbursementsVerifier(mockDataRepository.Object,
             mockPayslipDataProcessor.Object,
             mockDisbursementsDataProcessor.Object);
 
-        var results = await verifier.Verify();
+        var results = await verifier.Verify("someFileName.xlsx");
 
         Assert.Single(results);
         Assert.Equal(expectedResult, results.First());

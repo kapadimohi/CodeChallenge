@@ -38,7 +38,7 @@ public class S3DataRepositoryTests
         mockS3Client.Setup(m => m.GetObjectAsync(It.IsAny<GetObjectRequest>(),It.IsAny<CancellationToken>())).ReturnsAsync(expectedResponse);
         
         var s3DataRepository = new S3DataRepository(mockS3Client.Object, mockExcelDataAdapter.Object,mockDataParser.Object);
-        await s3DataRepository.GetDisbursementsSuperData();
+        await s3DataRepository.GetDisbursementsSuperData("someFileName.xlsx");
         
         mockS3Client.Verify(m => m.GetObjectAsync(It.IsAny<GetObjectRequest>(),It.IsAny<CancellationToken>()));
     }
@@ -65,7 +65,7 @@ public class S3DataRepositoryTests
         mockS3Client.Setup(m => m.GetObjectAsync(It.IsAny<GetObjectRequest>(),It.IsAny<CancellationToken>())).ReturnsAsync(expectedResponse);
         
         var s3DataRepository = new S3DataRepository(mockS3Client.Object, mockExcelDataAdapter.Object,mockDataParser.Object);
-        await s3DataRepository.GetDisbursementsSuperData();
+        await s3DataRepository.GetDisbursementsSuperData("someFileName.xlsx");
         
         mockExcelDataAdapter.Verify(m => m.GetData(It.IsAny<Stream>()), Times.Once);
     }
@@ -97,7 +97,7 @@ public class S3DataRepositoryTests
         mockS3Client.Setup(m => m.GetObjectAsync(It.IsAny<GetObjectRequest>(),It.IsAny<CancellationToken>())).ReturnsAsync(expectedResponse);
         
         var s3DataRepository = new S3DataRepository(mockS3Client.Object, mockExcelDataAdapter.Object,mockDataParser.Object);
-        await s3DataRepository.GetDisbursementsSuperData();
+        await s3DataRepository.GetDisbursementsSuperData("someFileName.xlsx");
         
         mockDataParser.Verify(m => m.ParseDisbursements(It.IsAny<DataTable>()), Times.Once);
         mockDataParser.Verify(m => m.ParsePayCodes(It.IsAny<DataTable>()), Times.Once);

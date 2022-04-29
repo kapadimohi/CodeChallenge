@@ -1,8 +1,5 @@
-using Amazon.S3;
-using Amazon.S3.Model;
 using CodeChallenge.DisbursementsVerifier.Models;
 using CodeChallenge.DisbursementsVerifier.Service.Interfaces;
-using ExcelDataReader;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CodeChallenge.DisbursementsVerifier.Api.Controllers;
@@ -22,14 +19,17 @@ public class VerifyDisbursementsController : ControllerBase
         _logger = logger;
     }
 
-    [HttpGet(Name = "Verify")]
+    [HttpPost(Name = "Verify")]
     [Produces("application/json")]
     [ProducesResponseType(typeof(IEnumerable<VerificationResult>), StatusCodes.Status200OK)]
-    public async Task<IActionResult> Verify()
+    public async Task<IActionResult> Verify([FromBody] string fileName="SampleSuperData.xlsx")
     {
         _logger.LogInformation("VerifyDisbursements endpoint");
+
+        if (string.IsNullOrWhiteSpace(fileName))
+            throw new ArgumentNullException(fileName, "Disbursement file name not provided");
         
-        var result = await _disbursementsVerifier.Verify();
+        var result = await _disbursementsVerifier.Verify(fileName);
         return Ok(result);
     }
 }

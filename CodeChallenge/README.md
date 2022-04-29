@@ -51,22 +51,34 @@ For Each of the 4 employees show the Quarterly grouping for the OTE amount, Supe
 
 ### Getting started
 
-#### 1. Running the Application Locally
+#### Running the Application 
 
-Run the following command in the root directory
+Run the following command in the root directory. This will start up the webapi and AWS local stack with S3 configured and a sample disbursement file available for consumption
 
-    dotnet run    
+    docker-compose up    
 
 Browse to the following url to display swagger to test the VerifyDisbursement functionality
 
     https://localhost:7272/swagger/index.html
 
-#### 2. Running the Application in Docker Container
-
-    docker build -t app .
-    docker run -d -p 8080:80 --name disbursementverifier app
-
-Browse to the following url to display swagger to test the VerifyDisbursement functionality
+Browse to the following url to test the VerifyDisbursement functionality
 
     https://localhost:8080/VerifyDisbursements
 
+To debug, run debugger in the IDE while LocalStack is running
+
+### Design Decisions
+
+1. Used a WebApi to complete this challenge keeping in line with micro services architecture. A console application would have sufficed, however, ideally such an application would normally be an api i.e be consumed by a UI or another service. A lambda was also considered but not pursued due to complexity and scaling issues due to a max time limit of 15minutes, which would make it less than ideal in real work situations.
+
+
+2. Use of AWS LocalStack. Initially the application just used local file system for IO. However, I decided to change it to use LocalStack instead since this will closely match the real work situation. Disbursement files are likely to be stored on S3 and its best to integrate with S3 locally as well. All that will be needed to make this work on Production is Production AWS credentials and S3 service URL. Rest should just work.
+
+
+3. Implemented a simple 3 tier application. Program entry is via the controller which takes in the name of the file that needs to be assessed, which then hands over to a service which orchestrates the retrieval of multiple sheets of data from the repositories and business logic to calculate the Disbursement variances. 
+
+
+4. Interfaces where possible. The use of interfaces is extensive to aid in unit testing and future extensibility. For e.g. IDataRepository is currently implemented by S3DataRepository. If tomorrow the repository location changes, it should be easy enough to create another class that implements the same interface and retrieves data from another source. 
+
+
+5. Comments are kept at a minimum. Code should ideally be self documenting with good usage of variable and method names e.g. MergePayslipAndDisbursementData does exactly what it says. A couple of exceptions are in the SuperCalculator where it made sense to me to include all the historical and future rates of Super for reference purposes. Another place for comments are in the DateTime extensions. There are 2 different ways of calculating "Quarterly" for this application and I believe it made sense to differentiate them with comments since it is not obvious. 

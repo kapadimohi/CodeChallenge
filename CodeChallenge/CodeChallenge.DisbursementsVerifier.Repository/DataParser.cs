@@ -27,11 +27,11 @@ public class DataParser : IDataParser
         {
             var disbursement = new Disbursement()
             {
-                Amount = Decimal.Parse(row["sgc_amount"].ToString()),
-                PaymentDate = DateTime.Parse(row["payment_made"].ToString(), CultureInfo.InvariantCulture),
-                PeriodFromDate = DateTime.Parse(row["pay_period_from"].ToString(), CultureInfo.InvariantCulture),
-                PeriodToDate = DateTime.Parse(row["pay_period_to"].ToString(), CultureInfo.InvariantCulture),
-                EmployeeCode = int.Parse(row["employee_code"].ToString())
+                Amount = Decimal.Parse(row["sgc_amount"].ToString() ?? string.Empty),
+                PaymentDate = DateTime.Parse(row["payment_made"].ToString() ?? string.Empty, CultureInfo.InvariantCulture),
+                PeriodFromDate = DateTime.Parse(row["pay_period_from"].ToString() ?? string.Empty, CultureInfo.InvariantCulture),
+                PeriodToDate = DateTime.Parse(row["pay_period_to"].ToString() ?? string.Empty, CultureInfo.InvariantCulture),
+                EmployeeCode = int.Parse(row["employee_code"].ToString() ?? string.Empty)
             };
             disbursements.Add(disbursement);
         }
@@ -49,11 +49,11 @@ public class DataParser : IDataParser
         {
             var payslipDetail = new PayslipDetail()
             {
-                PayslipId = Guid.Parse(row["payslip_id"].ToString()),
-                PayslipEndDate = DateTime.Parse(row["end"].ToString(), CultureInfo.InvariantCulture),
-                EmployeeCode = int.Parse(row["employee_code"].ToString(), CultureInfo.InvariantCulture),
+                PayslipId = Guid.Parse(row["payslip_id"].ToString() ?? string.Empty),
+                PayslipEndDate = DateTime.Parse(row["end"].ToString() ?? string.Empty, CultureInfo.InvariantCulture),
+                EmployeeCode = int.Parse(row["employee_code"].ToString() ?? string.Empty, CultureInfo.InvariantCulture),
                 Code = row["code"].ToString(),
-                Amount = Decimal.Parse(row["amount"].ToString()),
+                Amount = Decimal.Parse(row["amount"].ToString() ?? string.Empty),
                 
             };
             payslipDetails.Add(payslipDetail);

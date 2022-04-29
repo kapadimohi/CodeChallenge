@@ -5,5 +5,5 @@ namespace CodeChallenge.DisbursementsVerifier.Repository.Interfaces;
 
 public interface IDataRepository
 {
-    Task<DisbursementSuperData> GetDisbursementsSuperData();
+    Task<DisbursementSuperData> GetDisbursementsSuperData(string fileName);
 }
