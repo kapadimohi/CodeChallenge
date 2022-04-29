@@ -64,7 +64,7 @@ Browse to the following url to display swagger to test the VerifyDisbursement fu
 #### 2. Running the Application in Docker Container
 
     docker build -t app .
-    docker run -p 8080:80 --name disbursementverifier app
+    docker run -d -p 8080:80 --name disbursementverifier app
 
 Browse to the following url to display swagger to test the VerifyDisbursement functionality
 
