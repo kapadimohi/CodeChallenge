@@ -15,7 +15,7 @@ namespace CodeChallenge.DisbursementVerifier.Service.UnitTests;
 public class DisbursementsVerifierTests
 {
     [Fact]
-    public void GivenValidPayslipAndDisbursementData_WhenVerifyIsInvoked_ThenVerificationResultsMustBeReturned()
+    public async void GivenValidPayslipAndDisbursementData_WhenVerifyIsInvoked_ThenVerificationResultsMustBeReturned()
     {
         var mockDataRepository = new Mock<IDataRepository>();
         var mockPayslipDataProcessor = new Mock<IPayslipDataProcessor>();
@@ -81,13 +81,13 @@ public class DisbursementsVerifierTests
                 m.AggregteByEmployeeAndPeriod(It.IsAny<IEnumerable<Disbursement>>()))
             .Returns(stubProcessedDisbursementData);
         
-        mockDataRepository.Setup(m => m.GetDisbursementsSuperData()).Returns(stubDisbursementSuperData);
+        mockDataRepository.Setup(m => m.GetDisbursementsSuperData()).ReturnsAsync(stubDisbursementSuperData);
         
         var verifier = new DisbursementsVerifier.Service.DisbursementsVerifier(mockDataRepository.Object,
             mockPayslipDataProcessor.Object,
             mockDisbursementsDataProcessor.Object);
 
-        var results = verifier.Verify().ToList();
+        var results = await verifier.Verify();
 
         Assert.Single(results);
         Assert.Equal(expectedResult, results.First());

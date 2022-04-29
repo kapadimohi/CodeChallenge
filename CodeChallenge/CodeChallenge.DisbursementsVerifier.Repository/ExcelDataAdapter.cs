@@ -15,7 +15,7 @@ public class ExcelDataAdapter : IExcelDataAdapter
         _logger = logger;
     }
 
-    public DataSet GetData()
+    public Task<DataSet> GetData()
     {
         _logger.LogInformation($"Retrieving data from excel file {_fileLocation}");
         
@@ -32,9 +32,9 @@ public class ExcelDataAdapter : IExcelDataAdapter
                             UseHeaderRow = true 
                         }
                     };
-                
-                    var result = reader.AsDataSet(config);
-                    return result;
+            
+                    var result =  reader.AsDataSet(config);
+                    return Task.FromResult(result);
                 }
             }
         }

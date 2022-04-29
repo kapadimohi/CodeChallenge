@@ -21,13 +21,13 @@ public class DisbursementsVerifier : IDisbursementsVerifier
         _disbursementDataProcessor = disbursementDataProcessor;
     }
     
-    public IEnumerable<VerificationResult> Verify()
+    public async Task<IEnumerable<VerificationResult>> Verify()
     {
-        var disbursementsSuperData = _dataRepository.GetDisbursementsSuperData();
+        var disbursementsSuperData = await _dataRepository.GetDisbursementsSuperData();
 
-        var processedPayslipData = _payslipDataProcessor.AggregateByEmployeeAndPeriod(disbursementsSuperData.PayslipDetails, disbursementsSuperData.PayCodes);
+        var processedPayslipData =  _payslipDataProcessor.AggregateByEmployeeAndPeriod(disbursementsSuperData.PayslipDetails, disbursementsSuperData.PayCodes);
 
-        var processedDisbursementData = _disbursementDataProcessor.AggregteByEmployeeAndPeriod(disbursementsSuperData.Disbursements);
+        var processedDisbursementData =  _disbursementDataProcessor.AggregteByEmployeeAndPeriod(disbursementsSuperData.Disbursements);
 
         return MergePayslipAndDisbursementData(processedPayslipData, processedDisbursementData);
     }

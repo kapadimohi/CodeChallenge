@@ -20,9 +20,13 @@ public class VerifyDisbursementsController : ControllerBase
     }
 
     [HttpGet(Name = "Verify")]
-    public IEnumerable<VerificationResult> Verify()
+    [Produces("application/json")]
+    [ProducesResponseType(typeof(IEnumerable<VerificationResult>), StatusCodes.Status200OK)]
+    public async Task<IActionResult> Verify()
     {
-        var result = _disbursementsVerifier.Verify();
-        return result;
+        _logger.LogInformation("VerifyDisbursements endpoint");
+        
+        var result = await _disbursementsVerifier.Verify();
+        return Ok(result);
     }
 }

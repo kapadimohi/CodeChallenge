@@ -4,5 +4,5 @@ namespace CodeChallenge.DisbursementsVerifier.Repository.Interfaces;
 
 public interface IExcelDataAdapter
 {
-    DataSet GetData();
+    Task<DataSet> GetData();
 }

@@ -18,9 +18,9 @@ public class LocalDataRepository : IDataRepository
         _dataParser = dataParser;
     }
 
-    public DisbursementSuperData GetDisbursementsSuperData()
+    public async Task<DisbursementSuperData> GetDisbursementsSuperData()
     {
-        var dataSet = _excelDataAdapter.GetData();
+        var dataSet = await _excelDataAdapter.GetData();
 
         var disbursements = _dataParser.ParseDisbursements(dataSet.Tables[0]);
         var paySlipDetails = _dataParser.ParsePayslipDetails(dataSet.Tables[1]);
