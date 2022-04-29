@@ -22,7 +22,6 @@ builder.Services.AddSingleton<IDisbursementsVerifier, DisbursementsVerifier>();
 builder.Services.AddSingleton<IDisbursementDataProcessor, DisbursementDataProcessor>();
 builder.Services.AddSingleton<IPayslipDataProcessor, PayslipDataProcessor>();
 builder.Services.AddSingleton<ISuperCalculator, SuperCalculator>();
-builder.Services.AddSingleton<IDataRepository, LocalDataRepository>();
 builder.Services.AddSingleton<IDataParser, DataParser>();
 builder.Services.AddSingleton<IExcelDataStreamAdapter, ExcelDataStreamAdapter>();
 
@@ -45,7 +44,7 @@ if (awsLocalMode)
         {
             ServiceURL = awsUrl,
             AuthenticationRegion = awsRegion,
-            ForcePathStyle = true
+            ForcePathStyle = true,
         }));
 }
 else

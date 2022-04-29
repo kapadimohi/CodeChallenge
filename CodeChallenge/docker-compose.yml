@@ -13,12 +13,12 @@ services:
       - ./stubs/s3:/tmp/localstack
       - /var/run/docker.sock:/var/run/docker.sock
   
-#  webapi:
-#    image: ${DOCKER_REGISTRY-}disbursementsverifier
-#    build: 
-#      context: .
-#      dockerfile: Dockerfile
-#    ports:
-#      - "8080:80"
-#    depends_on:
-#      - localstack
+  webapi:
+    image: ${DOCKER_REGISTRY-}disbursementsverifier
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    depends_on:
+      - localstack

@@ -6,35 +6,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d1da6bee-00be-424b-a86c-a7ec93c6ff59" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/ExcelDataStreamAdapter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/S3DataRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository.UnitTests/S3DataRepositoryTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeChallenge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeChallenge/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api.UnitTests/obj/CodeChallenge.DisbursementsVerifier.Api.UnitTests.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api.UnitTests/obj/CodeChallenge.DisbursementsVerifier.Api.UnitTests.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api.UnitTests/obj/CodeChallenge.DisbursementsVerifier.Api.UnitTests.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api.UnitTests/obj/CodeChallenge.DisbursementsVerifier.Api.UnitTests.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api.UnitTests/obj/Debug/net6.0/CodeChallenge.DisbursementsVerifier.Api.UnitTests.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api.UnitTests/obj/Debug/net6.0/CodeChallenge.DisbursementsVerifier.Api.UnitTests.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api.UnitTests/obj/Debug/net6.0/CodeChallenge.DisbursementsVerifier.Api.UnitTests.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api.UnitTests/obj/Debug/net6.0/CodeChallenge.DisbursementsVerifier.Api.UnitTests.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api.UnitTests/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api.UnitTests/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api.UnitTests/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api.UnitTests/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api.UnitTests/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api.UnitTests/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/CodeChallenge.DisbursementsVerifier.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/CodeChallenge.DisbursementsVerifier.Api.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/Controllers/VerifyDisbursementsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/Controllers/VerifyDisbursementsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/obj/CodeChallenge.DisbursementsVerifier.Api.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/obj/CodeChallenge.DisbursementsVerifier.Api.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/obj/CodeChallenge.DisbursementsVerifier.Api.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/obj/CodeChallenge.DisbursementsVerifier.Api.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/obj/CodeChallenge.DisbursementsVerifier.Api.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/obj/CodeChallenge.DisbursementsVerifier.Api.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/obj/Debug/net6.0/CodeChallenge.DisbursementsVerifier.Api.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/obj/Debug/net6.0/CodeChallenge.DisbursementsVerifier.Api.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/obj/Debug/net6.0/CodeChallenge.DisbursementsVerifier.Api.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/obj/Debug/net6.0/CodeChallenge.DisbursementsVerifier.Api.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository.UnitTests/LocalDataRepositoryTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository.UnitTests/LocalDataRepositoryTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/CodeChallenge.DisbursementsVerifier.Repository.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/CodeChallenge.DisbursementsVerifier.Repository.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/ExcelDataAdapter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/Interfaces/IExcelDataAdapter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/Interfaces/IExcelDataStreamAdapter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/LocalDataRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/LocalDataRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository.UnitTests/LocalDataRepositoryTests.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/LocalDataRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/S3DataRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/S3DataRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stubs/s3/data/startup_info.json" beforeDir="false" afterPath="$PROJECT_DIR$/stubs/s3/data/startup_info.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,37 +131,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/S3DataRepository.cs</url>
-          <line>32</line>
-          <properties documentPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/S3DataRepository.cs" initialLine="32" containingFunctionPresentation="method 'GetDisbursementsSuperData'">
-            <startOffsets>
-              <option value="1189" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1364" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/Program.cs</url>
-          <line>39</line>
-          <properties documentPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/Program.cs" initialLine="39" containingFunctionPresentation="">
-            <startOffsets>
-              <option value="1783" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1800" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

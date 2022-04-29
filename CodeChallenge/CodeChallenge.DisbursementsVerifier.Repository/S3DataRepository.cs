@@ -1,3 +1,4 @@
+using System.Data;
 using Amazon.S3;
 using Amazon.S3.Model;
 using CodeChallenge.DisbursementsVerifier.Models.Disbursements;
@@ -22,9 +23,12 @@ public class S3DataRepository : IDataRepository
 
     public async Task<DisbursementSuperData> GetDisbursementsSuperData()
     {
-        var stream = await GetObjectStream("test", "SampleSuperData.xlsx");
+        DataSet dataSet;
         
-        var dataSet = await _excelDataStreamAdapter.GetData(stream);
+        await using(var stream = await GetObjectStream("test", "SampleSuperData.xlsx"))
+        {
+            dataSet = await _excelDataStreamAdapter.GetData(stream);
+        }
         
         var disbursements = _dataParser.ParseDisbursements(dataSet.Tables[0]);
         var paySlipDetails = _dataParser.ParsePayslipDetails(dataSet.Tables[1]);
