@@ -14,7 +14,7 @@ public class LocalDataRepositoryTests
     [Fact]
     public async void GivenLocalDataRepository_WhenGetDisbursementsSuperDataIsInvoked_ThenExcelDataShouldBeRetrieved()
     {
-        var mockExcelDataAdapter = new Mock<IExcelDataAdapter>();
+        var mockExcelDataAdapter = new Mock<IExcelDataStreamAdapter>();
         var mockDataParser = new Mock<IDataParser>();
 
         var expectedDataSet = new DataSet();
@@ -33,7 +33,7 @@ public class LocalDataRepositoryTests
     [Fact]
     public async void GivenLocalDataRepository_WhenGetDisbursementsSuperDataIsInvoked_Then_Disbursements_PayslipDetails_And_PayCodes_DataShouldBeParsed()
     {
-        var mockExcelDataAdapter = new Mock<IExcelDataAdapter>();
+        var mockExcelDataAdapter = new Mock<IExcelDataStreamAdapter>();
         var mockDataParser = new Mock<IDataParser>();
 
         var expectedDataSet = new DataSet();

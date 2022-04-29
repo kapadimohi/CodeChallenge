@@ -1,0 +1,38 @@
+[
+    {
+        "timestamp": "2022-04-29T09:23:20.764258",
+        "localstack_version": "0.14.2",
+        "localstack_ext_version": "0.14.2.13",
+        "pro_activated": false
+    },
+    {
+        "timestamp": "2022-04-29T10:03:36.154346",
+        "localstack_version": "0.14.2",
+        "localstack_ext_version": "0.14.2.13",
+        "pro_activated": false
+    },
+    {
+        "timestamp": "2022-04-29T10:05:39.546536",
+        "localstack_version": "0.14.2",
+        "localstack_ext_version": "0.14.2.13",
+        "pro_activated": false
+    },
+    {
+        "timestamp": "2022-04-29T10:07:42.076591",
+        "localstack_version": "0.14.2",
+        "localstack_ext_version": "0.14.2.13",
+        "pro_activated": false
+    },
+    {
+        "timestamp": "2022-04-29T10:08:35.545306",
+        "localstack_version": "0.14.2",
+        "localstack_ext_version": "0.14.2.13",
+        "pro_activated": false
+    },
+    {
+        "timestamp": "2022-04-29T10:46:39.799240",
+        "localstack_version": "0.14.2",
+        "localstack_ext_version": "0.14.2.13",
+        "pro_activated": false
+    }
+]

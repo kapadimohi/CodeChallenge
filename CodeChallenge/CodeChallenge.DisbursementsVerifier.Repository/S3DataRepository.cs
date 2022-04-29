@@ -1,33 +1,30 @@
-using System.Data;
-using CodeChallenge.DisbursementsVerifier.Models;
+using Amazon.S3;
+using Amazon.S3.Model;
 using CodeChallenge.DisbursementsVerifier.Models.Disbursements;
 using CodeChallenge.DisbursementsVerifier.Repository.Interfaces;
 
 namespace CodeChallenge.DisbursementsVerifier.Repository;
 
-public class LocalDataRepository : IDataRepository
+public class S3DataRepository : IDataRepository
 {
+    private readonly IAmazonS3 _s3Client;
     private readonly IExcelDataStreamAdapter _excelDataStreamAdapter;
     private readonly IDataParser _dataParser;
-    private readonly  string _fileLocation = "SampleSuperData.xlsx";
-    
-    public LocalDataRepository(
+
+    public S3DataRepository(IAmazonS3 s3Client,
         IExcelDataStreamAdapter excelDataStreamAdapter,
-        IDataParser dataParser
-        )
+        IDataParser dataParser)
     {
+        _s3Client = s3Client;
         _excelDataStreamAdapter = excelDataStreamAdapter;
         _dataParser = dataParser;
     }
 
     public async Task<DisbursementSuperData> GetDisbursementsSuperData()
     {
-        DataSet dataSet;
-
-        await using (var stream = File.Open(_fileLocation, FileMode.Open, FileAccess.Read))
-        {
-            dataSet = await _excelDataStreamAdapter.GetData(stream);
-        }
+        var stream = await GetObjectStream("test", "SampleSuperData.xlsx");
+        
+        var dataSet = await _excelDataStreamAdapter.GetData(stream);
         
         var disbursements = _dataParser.ParseDisbursements(dataSet.Tables[0]);
         var paySlipDetails = _dataParser.ParsePayslipDetails(dataSet.Tables[1]);
@@ -39,5 +36,23 @@ public class LocalDataRepository : IDataRepository
             PayCodes = payCodes,
             PayslipDetails = paySlipDetails
         };
+    }
+
+    private async Task<Stream> GetObjectStream(string bucketName, string fileName)
+    {
+        var response = await _s3Client.GetObjectAsync(new GetObjectRequest
+        {
+            Key = fileName,
+            BucketName = bucketName,
+        });
+        
+        MemoryStream memoryStream = new MemoryStream();
+
+        using (Stream responseStream = response.ResponseStream)
+        {
+            responseStream.CopyTo(memoryStream);
+        }
+
+        return memoryStream;
     }
 }

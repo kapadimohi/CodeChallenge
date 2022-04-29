@@ -1,5 +1,8 @@
+using Amazon.S3;
+using Amazon.S3.Model;
 using CodeChallenge.DisbursementsVerifier.Models;
 using CodeChallenge.DisbursementsVerifier.Service.Interfaces;
+using ExcelDataReader;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CodeChallenge.DisbursementsVerifier.Api.Controllers;
@@ -26,6 +29,38 @@ public class VerifyDisbursementsController : ControllerBase
     {
         _logger.LogInformation("VerifyDisbursements endpoint");
         
+        var s3Client = new AmazonS3Client(new AmazonS3Config
+        {
+            ServiceURL = "http://localhost:4566",
+            ForcePathStyle = true,
+        });
+
+        var response = await s3Client.GetObjectAsync(new GetObjectRequest
+        {
+            Key = "SampleSuperData.xlsx",
+            BucketName = "test",
+        });
+        
+        MemoryStream memoryStream = new MemoryStream();
+
+        using (Stream responseStream = response.ResponseStream)
+        {
+            responseStream.CopyTo(memoryStream);
+        }
+        
+        using (var reader = ExcelReaderFactory.CreateReader(memoryStream))
+        {
+            var config = new ExcelDataSetConfiguration
+            {
+                ConfigureDataTable = _ => new ExcelDataTableConfiguration
+                {
+                    UseHeaderRow = true 
+                }
+            };
+            
+            var test =  reader.AsDataSet(config);
+        }
+
         var result = await _disbursementsVerifier.Verify();
         return Ok(result);
     }

@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "yVejWu4OsOtHijCpODzSxbF/5IN1sJnNXzuXco4dvgvQiEB72rUpE8U7RbAPd4P4OpgbhXd6DhqMpwh53i6NeA==",
+  "dgSpecHash": "rEIBjcEctBPiOfHdjtyEVrsNfmQIWp6jJ/XGOAtjlHJ1BUiQIOFzP2hERdEAcBj5rFwKIr64ZcRKcKd95Hp1WA==",
   "success": true,
   "projectFilePath": "/Users/mohit.kapadia/Documents/GitHub/CodeChallenge/CodeChallenge/CodeChallenge.DisbursementsVerifier.Api.UnitTests/CodeChallenge.DisbursementsVerifier.Api.UnitTests.csproj",
   "expectedPackageFiles": [
+    "/Users/mohit.kapadia/.nuget/packages/awssdk.core/3.7.10.11/awssdk.core.3.7.10.11.nupkg.sha512",
+    "/Users/mohit.kapadia/.nuget/packages/awssdk.extensions.netcore.setup/3.7.2/awssdk.extensions.netcore.setup.3.7.2.nupkg.sha512",
+    "/Users/mohit.kapadia/.nuget/packages/awssdk.s3/3.7.8.23/awssdk.s3.3.7.8.23.nupkg.sha512",
     "/Users/mohit.kapadia/.nuget/packages/castle.core/4.4.1/castle.core.4.4.1.nupkg.sha512",
     "/Users/mohit.kapadia/.nuget/packages/coverlet.collector/3.1.0/coverlet.collector.3.1.0.nupkg.sha512",
     "/Users/mohit.kapadia/.nuget/packages/exceldatareader/3.6.0/exceldatareader.3.6.0.nupkg.sha512",
@@ -11,6 +14,8 @@
     "/Users/mohit.kapadia/.nuget/packages/microsoft.codecoverage/16.11.0/microsoft.codecoverage.16.11.0.nupkg.sha512",
     "/Users/mohit.kapadia/.nuget/packages/microsoft.csharp/4.0.1/microsoft.csharp.4.0.1.nupkg.sha512",
     "/Users/mohit.kapadia/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/Users/mohit.kapadia/.nuget/packages/microsoft.extensions.configuration/7.0.0-preview.3.22175.4/microsoft.extensions.configuration.7.0.0-preview.3.22175.4.nupkg.sha512",
+    "/Users/mohit.kapadia/.nuget/packages/microsoft.extensions.configuration.abstractions/7.0.0-preview.3.22175.4/microsoft.extensions.configuration.abstractions.7.0.0-preview.3.22175.4.nupkg.sha512",
     "/Users/mohit.kapadia/.nuget/packages/microsoft.extensions.dependencyinjection/7.0.0-preview.3.22175.4/microsoft.extensions.dependencyinjection.7.0.0-preview.3.22175.4.nupkg.sha512",
     "/Users/mohit.kapadia/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0-preview.3.22175.4/microsoft.extensions.dependencyinjection.abstractions.7.0.0-preview.3.22175.4.nupkg.sha512",
     "/Users/mohit.kapadia/.nuget/packages/microsoft.extensions.logging/7.0.0-preview.3.22175.4/microsoft.extensions.logging.7.0.0-preview.3.22175.4.nupkg.sha512",

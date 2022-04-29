@@ -2,7 +2,7 @@ using System.Data;
 
 namespace CodeChallenge.DisbursementsVerifier.Repository.Interfaces;
 
-public interface IExcelDataAdapter
+public interface IExcelDataStreamAdapter
 {
-    Task<DataSet> GetData();
+    Task<DataSet> GetData(Stream stream);
 }
