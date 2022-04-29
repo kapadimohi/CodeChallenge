@@ -16,27 +16,25 @@ public class ExcelDataStreamAdapter : IExcelDataStreamAdapter
 
     public Task<DataSet> GetData(Stream stream)
     {
-        _logger.LogInformation($"Retrieving data from excel stream ");
+        _logger.LogInformation($"Retrieving data from excel stream");
         
         try
         {
-            using (var reader = ExcelReaderFactory.CreateReader(stream))
+            using var reader = ExcelReaderFactory.CreateReader(stream);
+            var config = new ExcelDataSetConfiguration
             {
-                var config = new ExcelDataSetConfiguration
+                ConfigureDataTable = _ => new ExcelDataTableConfiguration
                 {
-                    ConfigureDataTable = _ => new ExcelDataTableConfiguration
-                    {
-                        UseHeaderRow = true 
-                    }
-                };
+                    UseHeaderRow = true 
+                }
+            };
         
-                var result =  reader.AsDataSet(config);
-                return Task.FromResult(result);
-            }
+            var result =  reader.AsDataSet(config);
+            return Task.FromResult(result);
         }
         catch (Exception e)
         {
-            _logger.LogError($"Error reading data from stream");
+            _logger.LogError($"Error reading data from stream", e.Message);
             throw;
         }
     }

@@ -45,8 +45,8 @@ public class PayslipDataProcessorTests
 
         var payCodes = new List<PayCode>()
         {
-            new() {Code = "Applicable Code", OTETreatment = "OTE"},
-            new() {Code = "Non-Applicable Code", OTETreatment = "Not OTE"}
+            new() {Code = "Applicable Code", OteTreatment = "OTE"},
+            new() {Code = "Non-Applicable Code", OteTreatment = "Not OTE"}
         };
         
         var processor = new PayslipDataProcessor(new SuperCalculator());
@@ -92,8 +92,8 @@ public class PayslipDataProcessorTests
 
         var payCodes = new List<PayCode>()
         {
-            new() {Code = "Applicable Code", OTETreatment = "OTE"},
-            new() {Code = "Non-Applicable Code", OTETreatment = "Not OTE"}
+            new() {Code = "Applicable Code", OteTreatment = "OTE"},
+            new() {Code = "Non-Applicable Code", OteTreatment = "Not OTE"}
         };
         
         var processor = new PayslipDataProcessor(new SuperCalculator());
@@ -163,8 +163,8 @@ public class PayslipDataProcessorTests
 
         var payCodes = new List<PayCode>()
         {
-            new() {Code = "Applicable Code", OTETreatment = "OTE"},
-            new() {Code = "Non-Applicable Code", OTETreatment = "Not OTE"}
+            new() {Code = "Applicable Code", OteTreatment = "OTE"},
+            new() {Code = "Non-Applicable Code", OteTreatment = "Not OTE"}
         };
         
         var processor = new PayslipDataProcessor(new SuperCalculator());

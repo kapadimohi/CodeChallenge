@@ -93,6 +93,6 @@ public class DataParserTests
 
         Assert.Single(result);
         Assert.Equal("10 - Annual Lve", result.First().Code);
-        Assert.Equal("OTE", result.First().OTETreatment);
+        Assert.Equal("OTE", result.First().OteTreatment);
     }
 }

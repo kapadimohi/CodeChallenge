@@ -7,6 +7,7 @@ using CodeChallenge.DisbursementsVerifier.Models.Payslips;
 using CodeChallenge.DisbursementsVerifier.Repository;
 using CodeChallenge.DisbursementsVerifier.Repository.Interfaces;
 using CodeChallenge.DisbursementsVerifier.Service.Interfaces;
+using Microsoft.Extensions.Logging;
 using Moq;
 using Xunit;
 
@@ -20,6 +21,7 @@ public class DisbursementsVerifierTests
         var mockDataRepository = new Mock<IDataRepository>();
         var mockPayslipDataProcessor = new Mock<IPayslipDataProcessor>();
         var mockDisbursementsDataProcessor = new Mock<IDisbursementDataProcessor>();
+        var mockLogger = new Mock<ILogger<DisbursementsVerifier.Service.DisbursementsVerifier>>();
 
         var stubPayslipDetails = new List<PayslipDetail>();
 
@@ -30,7 +32,7 @@ public class DisbursementsVerifierTests
             new()
             {
                 Code = "Code",
-                OTETreatment = "OTE"
+                OteTreatment = "OTE"
             }
         };
 
@@ -78,12 +80,14 @@ public class DisbursementsVerifierTests
             .Returns(stubProcessedPaySlipData);
         
         mockDisbursementsDataProcessor.Setup(m =>
-                m.AggregteByEmployeeAndPeriod(It.IsAny<IEnumerable<Disbursement>>()))
+                m.AggregateByEmployeeAndPeriod(It.IsAny<IEnumerable<Disbursement>>()))
             .Returns(stubProcessedDisbursementData);
         
         mockDataRepository.Setup(m => m.GetDisbursementsSuperData(It.IsAny<string>())).ReturnsAsync(stubDisbursementSuperData);
         
-        var verifier = new DisbursementsVerifier.Service.DisbursementsVerifier(mockDataRepository.Object,
+        var verifier = new DisbursementsVerifier.Service.DisbursementsVerifier(
+            mockLogger.Object,
+            mockDataRepository.Object,
             mockPayslipDataProcessor.Object,
             mockDisbursementsDataProcessor.Object);
 

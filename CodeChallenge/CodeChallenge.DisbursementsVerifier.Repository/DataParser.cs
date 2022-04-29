@@ -72,8 +72,8 @@ public class DataParser : IDataParser
         {
             var payCode = new PayCode()
             {
-                Code = row["pay_code"].ToString(),
-                OTETreatment = row["ote_treament"].ToString()
+                Code = row["pay_code"].ToString() ?? string.Empty,
+                OteTreatment = row["ote_treament"].ToString() ?? string.Empty
             };
             payCodes.Add(payCode);
         }

@@ -3,19 +3,24 @@ using CodeChallenge.DisbursementsVerifier.Models.Disbursements;
 using CodeChallenge.DisbursementsVerifier.Models.Payslips;
 using CodeChallenge.DisbursementsVerifier.Repository.Interfaces;
 using CodeChallenge.DisbursementsVerifier.Service.Interfaces;
+using Microsoft.Extensions.Logging;
 
 namespace CodeChallenge.DisbursementsVerifier.Service;
 
 public class DisbursementsVerifier : IDisbursementsVerifier
 {
+    private readonly ILogger<DisbursementsVerifier> _logger;
     private readonly IDataRepository _dataRepository;
     private readonly IPayslipDataProcessor _payslipDataProcessor;
     private readonly IDisbursementDataProcessor _disbursementDataProcessor;
 
-    public DisbursementsVerifier(IDataRepository dataRepository, 
+    public DisbursementsVerifier(
+        ILogger<DisbursementsVerifier> logger,
+        IDataRepository dataRepository, 
         IPayslipDataProcessor payslipDataProcessor,
         IDisbursementDataProcessor disbursementDataProcessor)
     {
+        _logger = logger;
         _dataRepository = dataRepository;
         _payslipDataProcessor = payslipDataProcessor;
         _disbursementDataProcessor = disbursementDataProcessor;
@@ -23,11 +28,13 @@ public class DisbursementsVerifier : IDisbursementsVerifier
     
     public async Task<IEnumerable<VerificationResult>> Verify(string fileName)
     {
+        _logger.LogInformation("VerifyDisbursements service");
+        
         var disbursementsSuperData = await _dataRepository.GetDisbursementsSuperData(fileName);
 
         var processedPayslipData =  _payslipDataProcessor.AggregateByEmployeeAndPeriod(disbursementsSuperData.PayslipDetails, disbursementsSuperData.PayCodes);
 
-        var processedDisbursementData =  _disbursementDataProcessor.AggregteByEmployeeAndPeriod(disbursementsSuperData.Disbursements);
+        var processedDisbursementData =  _disbursementDataProcessor.AggregateByEmployeeAndPeriod(disbursementsSuperData.Disbursements);
 
         return MergePayslipAndDisbursementData(processedPayslipData, processedDisbursementData);
     }

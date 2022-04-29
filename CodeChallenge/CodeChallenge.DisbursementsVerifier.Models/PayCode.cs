@@ -3,11 +3,11 @@ namespace CodeChallenge.DisbursementsVerifier.Models;
 public record PayCode
 {
     public string Code { get; set; }
-    public string OTETreatment { get; set; }
+    public string OteTreatment { get; set; }
 }
 
-public enum OTETreatment
+public enum OteTreatment
 {
-    OTE,
-    NotOTE
+    Ote,
+    NotOte
 }
