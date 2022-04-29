@@ -6,10 +6,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d1da6bee-00be-424b-a86c-a7ec93c6ff59" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeChallenge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeChallenge/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/Controllers/VerifyDisbursementsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/Controllers/VerifyDisbursementsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Models/Extensions/DateTimeExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Models/Extensions/DateTimeExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/LocalDataRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/LocalDataRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api.UnitTests/obj/Debug/net6.0/CodeChallenge.DisbursementsVerifier.Api.UnitTests.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api.UnitTests/obj/Debug/net6.0/CodeChallenge.DisbursementsVerifier.Api.UnitTests.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/CodeChallenge.DisbursementsVerifier.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/CodeChallenge.DisbursementsVerifier.Api.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +98,7 @@
       <updated>1651060955908</updated>
       <workItem from="1651060976965" duration="7611000" />
       <workItem from="1651071786033" duration="30843000" />
-      <workItem from="1651157832935" duration="9503000" />
+      <workItem from="1651157832935" duration="15846000" />
     </task>
     <servers />
   </component>

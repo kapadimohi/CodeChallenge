@@ -15,4 +15,11 @@
       <ProjectReference Include="..\CodeChallenge.DisbursementsVerifier.Service\CodeChallenge.DisbursementsVerifier.Service.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Remove="SampleSuperData.xlsx" />
+      <Content Include="SampleSuperData.xlsx">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
 </Project>
