@@ -21,6 +21,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<IDisbursementsVerifier, DisbursementsVerifier>();
 builder.Services.AddSingleton<IDisbursementDataProcessor, DisbursementDataProcessor>();
 builder.Services.AddSingleton<IPayslipDataProcessor, PayslipDataProcessor>();
+builder.Services.AddSingleton<IEmployeePeriodProcessor, EmployeePeriodProcessor>();
 builder.Services.AddSingleton<ISuperCalculator, SuperCalculator>();
 builder.Services.AddSingleton<IDataParser, DataParser>();
 builder.Services.AddSingleton<IExcelDataStreamAdapter, ExcelDataStreamAdapter>();

@@ -16,13 +16,4 @@
       <PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0-preview.3.22175.4" />
       <PackageReference Include="System.Text.Encoding.CodePages" Version="7.0.0-preview.3.22175.4" />
     </ItemGroup>
-
-    <ItemGroup>
-      <None Remove="Sample Super Data.xlsx" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <None Remove="SampleSuperData.xlsx" />
-    </ItemGroup>
-
 </Project>

@@ -6,10 +6,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d1da6bee-00be-424b-a86c-a7ec93c6ff59" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Models/EmployeePeriod.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/Processors/EmployeePeriodProcessor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeChallenge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeChallenge/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.localstack/data/SampleSuperData.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.localstack/data/recorded_api_calls.json" beforeDir="false" afterPath="$PROJECT_DIR$/.localstack/data/recorded_api_calls.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api.UnitTests/obj/Debug/net6.0/CodeChallenge.DisbursementsVerifier.Api.UnitTests.AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api.UnitTests/obj/Debug/net6.0/CodeChallenge.DisbursementsVerifier.Api.UnitTests.AssemblyInfoInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api.UnitTests/obj/Debug/net6.0/CodeChallenge.DisbursementsVerifier.Api.UnitTests.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api.UnitTests/obj/Debug/net6.0/CodeChallenge.DisbursementsVerifier.Api.UnitTests.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api.UnitTests/obj/Debug/net6.0/CodeChallenge.DisbursementsVerifier.Api.UnitTests.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api.UnitTests/obj/Debug/net6.0/CodeChallenge.DisbursementsVerifier.Api.UnitTests.csproj.AssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/CodeChallenge.DisbursementsVerifier.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/CodeChallenge.DisbursementsVerifier.Api.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/SampleSuperData.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/obj/Debug/net6.0/CodeChallenge.DisbursementsVerifier.Api.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/obj/Debug/net6.0/CodeChallenge.DisbursementsVerifier.Api.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/obj/Debug/net6.0/CodeChallenge.DisbursementsVerifier.Api.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Api/obj/Debug/net6.0/CodeChallenge.DisbursementsVerifier.Api.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Models/PayCode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Models/PayCode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/CodeChallenge.DisbursementsVerifier.Repository.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/CodeChallenge.DisbursementsVerifier.Repository.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service.UnitTests/DisbursementsVerifierTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service.UnitTests/DisbursementsVerifierTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/DisbursementsVerifier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/DisbursementsVerifier.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/EmployeePeriodProcessor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/Interfaces/IEmployeePeriodProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/Interfaces/IEmployeePeriodProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/Processors/PayslipDataProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service/Processors/PayslipDataProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stubs/s3/data/startup_info.json" beforeDir="false" afterPath="$PROJECT_DIR$/stubs/s3/data/startup_info.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +39,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/ExcelDataStreamAdapter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Repository/Interfaces/IExcelDataStreamAdapter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service.UnitTests/SuperCalculatorTests.cs" root0="FORCE_HIGHLIGHTING" />
@@ -102,6 +120,7 @@
       <workItem from="1651060976965" duration="7611000" />
       <workItem from="1651071786033" duration="30843000" />
       <workItem from="1651157832935" duration="20107000" />
+      <workItem from="1651326762739" duration="6426000" />
     </task>
     <servers />
   </component>
@@ -123,5 +142,24 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service.UnitTests/DisbursementsVerifierTests.cs</url>
+          <line>111</line>
+          <properties documentPath="$PROJECT_DIR$/CodeChallenge.DisbursementsVerifier.Service.UnitTests/DisbursementsVerifierTests.cs" initialLine="111" containingFunctionPresentation="method 'GivenValidPayslipAndDisbursementData_WhenVerifyIsInvoked_ThenVerificationResultsMustBeReturned'">
+            <startOffsets>
+              <option value="3899" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3922" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

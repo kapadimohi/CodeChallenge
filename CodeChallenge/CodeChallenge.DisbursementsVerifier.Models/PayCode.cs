@@ -6,8 +6,8 @@ public record PayCode
     public string OteTreatment { get; set; }
 }
 
-public enum OteTreatment
+public static class OteTreatment
 {
-    Ote,
-    NotOte
+    public const string OTE = "OTE";
+    public const string NotOTE = "Not OTE";
 }

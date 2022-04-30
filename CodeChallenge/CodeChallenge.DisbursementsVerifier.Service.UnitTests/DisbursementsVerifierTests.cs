@@ -22,6 +22,7 @@ public class DisbursementsVerifierTests
         var mockPayslipDataProcessor = new Mock<IPayslipDataProcessor>();
         var mockDisbursementsDataProcessor = new Mock<IDisbursementDataProcessor>();
         var mockLogger = new Mock<ILogger<DisbursementsVerifier.Service.DisbursementsVerifier>>();
+        var mockEmployeePeriodProcessor = new Mock<IEmployeePeriodProcessor>();
 
         var stubPayslipDetails = new List<PayslipDetail>();
 
@@ -74,6 +75,20 @@ public class DisbursementsVerifierTests
             TotalOrdinaryTimeEarnings = 1000,
             TotalSuperPayable = 100,
         };
+        
+        var stubEmployeePeriods = new List<EmployeePeriod>()
+        {
+            new()
+            {
+                EmployeeCode = 1111,
+                Year = 2022,
+                Quarter = 1
+            }
+        };
+
+        mockEmployeePeriodProcessor.Setup(m => m.GetPeriods(It.IsAny<IEnumerable<ProcessedPayslipData>>(),
+            It.IsAny<IEnumerable<ProcessedDisbursementData>>())).Returns(stubEmployeePeriods);
+
 
         mockPayslipDataProcessor.Setup(m =>
                 m.AggregateByEmployeeAndPeriod(It.IsAny<IEnumerable<PayslipDetail>>(), It.IsAny<IEnumerable<PayCode>>()))
@@ -89,7 +104,8 @@ public class DisbursementsVerifierTests
             mockLogger.Object,
             mockDataRepository.Object,
             mockPayslipDataProcessor.Object,
-            mockDisbursementsDataProcessor.Object);
+            mockDisbursementsDataProcessor.Object,
+            mockEmployeePeriodProcessor.Object);
 
         var results = await verifier.Verify("someFileName.xlsx");
 
@@ -105,7 +121,8 @@ public class DisbursementsVerifierTests
         var mockPayslipDataProcessor = new Mock<IPayslipDataProcessor>();
         var mockDisbursementsDataProcessor = new Mock<IDisbursementDataProcessor>();
         var mockLogger = new Mock<ILogger<DisbursementsVerifier.Service.DisbursementsVerifier>>();
-
+        var mockEmployeePeriodProcessor = new Mock<IEmployeePeriodProcessor>();
+        
         var stubPayslipDetails = new List<PayslipDetail>();
 
         var stubDisbursementsData = new List<Disbursement>();
@@ -126,8 +143,10 @@ public class DisbursementsVerifierTests
             PayCodes = stubPayCodes
         };
 
+        //Do not provide payslip data
         var stubProcessedPaySlipData = new List<ProcessedPayslipData>();
         
+        //Provide disbursement data
         var stubProcessedDisbursementData = new List<ProcessedDisbursementData>()
         {
             new()
@@ -136,6 +155,16 @@ public class DisbursementsVerifierTests
                 Disbursement = 100,
                 Quarter = 1,
                 Year = 2022
+            }
+        };
+        
+        var stubEmployeePeriods = new List<EmployeePeriod>()
+        {
+            new()
+            {
+                EmployeeCode = 1111,
+                Year = 2022,
+                Quarter = 1
             }
         };
 
@@ -148,6 +177,9 @@ public class DisbursementsVerifierTests
             TotalOrdinaryTimeEarnings = 0,
             TotalSuperPayable = 0,
         };
+        
+        mockEmployeePeriodProcessor.Setup(m => m.GetPeriods(It.IsAny<IEnumerable<ProcessedPayslipData>>(),
+            It.IsAny<IEnumerable<ProcessedDisbursementData>>())).Returns(stubEmployeePeriods);
 
         mockPayslipDataProcessor.Setup(m =>
                 m.AggregateByEmployeeAndPeriod(It.IsAny<IEnumerable<PayslipDetail>>(), It.IsAny<IEnumerable<PayCode>>()))
@@ -163,7 +195,8 @@ public class DisbursementsVerifierTests
             mockLogger.Object,
             mockDataRepository.Object,
             mockPayslipDataProcessor.Object,
-            mockDisbursementsDataProcessor.Object);
+            mockDisbursementsDataProcessor.Object,
+            mockEmployeePeriodProcessor.Object);
 
         var results = await verifier.Verify("someFileName.xlsx");
 

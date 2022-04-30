@@ -26,11 +26,11 @@ public class PayslipDataProcessor : IPayslipDataProcessor
             .Select(p => 
                 new ProcessedPayslipData
                 {
-                    TotalOte = p.Where(p => payCodes.Any(pc => pc.OteTreatment == OteTreatment.Ote.ToString() && p.Code == pc.Code)).Sum(l => l.Amount), 
+                    TotalOte = p.Where(p => payCodes.Any(pc => pc.OteTreatment == OteTreatment.OTE && p.Code == pc.Code)).Sum(l => l.Amount), 
                     EmployeeCode = p.Key.EmployeeCode, 
                     QuarterEndingDate = p.Key.QuarterEndingDate,
                     TotalSuperPayable = _superCalculator.CalculateSuperForGivenOTEAndPeriod(
-                        p.Where(p => payCodes.Any(pc => pc.OteTreatment == OteTreatment.Ote.ToString() 
+                        p.Where(p => payCodes.Any(pc => pc.OteTreatment == OteTreatment.OTE.ToString() 
                                                         && p.Code == pc.Code))
                             .Sum(l => l.Amount),p.Key.QuarterEndingDate)
                 })

@@ -13,17 +13,20 @@ public class DisbursementsVerifier : IDisbursementsVerifier
     private readonly IDataRepository _dataRepository;
     private readonly IPayslipDataProcessor _payslipDataProcessor;
     private readonly IDisbursementDataProcessor _disbursementDataProcessor;
+    private readonly IEmployeePeriodProcessor _employeePeriodProcessor;
 
     public DisbursementsVerifier(
         ILogger<DisbursementsVerifier> logger,
         IDataRepository dataRepository, 
         IPayslipDataProcessor payslipDataProcessor,
-        IDisbursementDataProcessor disbursementDataProcessor)
+        IDisbursementDataProcessor disbursementDataProcessor,
+        IEmployeePeriodProcessor employeePeriodProcessor)
     {
         _logger = logger;
         _dataRepository = dataRepository;
         _payslipDataProcessor = payslipDataProcessor;
         _disbursementDataProcessor = disbursementDataProcessor;
+        _employeePeriodProcessor = employeePeriodProcessor;
     }
     
     public async Task<IEnumerable<VerificationResult>> Verify(string fileName)
@@ -36,55 +39,17 @@ public class DisbursementsVerifier : IDisbursementsVerifier
 
         var processedDisbursementData =  _disbursementDataProcessor.AggregateByEmployeeAndPeriod(disbursementsSuperData.Disbursements);
 
-        return MergePayslipAndDisbursementData(processedPayslipData, processedDisbursementData);
+        return MergePayslipAndDisbursementData(processedPayslipData.ToList(), processedDisbursementData.ToList());
     }
     
-    private static IEnumerable<VerificationResult> MergePayslipAndDisbursementData(IEnumerable<ProcessedPayslipData> processedPayslipData,
-        IEnumerable<ProcessedDisbursementData> processedDisbursementData)
+    private IEnumerable<VerificationResult> MergePayslipAndDisbursementData(IList<ProcessedPayslipData> processedPayslipData,
+        IList<ProcessedDisbursementData> processedDisbursementData)
     {
-        // var query =
-        //     from paySlipData in processedPayslipData
-        //     join disbursementData in processedDisbursementData
-        //         on new {paySlipData.EmployeeCode, paySlipData.Year, paySlipData.Quarter}
-        //         equals new {disbursementData.EmployeeCode, disbursementData.Year, disbursementData.Quarter} into
-        //         payslipAndDisbursement
-        //     from disbursement in payslipAndDisbursement.DefaultIfEmpty()
-        //     select new VerificationResult
-        //     {
-        //         EmployeeCode = paySlipData.EmployeeCode,
-        //         Year = paySlipData.Year,
-        //         Quarter = paySlipData.Quarter,
-        //         TotalOrdinaryTimeEarnings = paySlipData.TotalOte,
-        //         TotalSuperPayable = paySlipData.TotalSuperPayable,
-        //         TotalDisbursed = disbursement?.Disbursement ?? 0
-        //     };
-
-
-        var processedPayslipDatas = processedPayslipData.ToList();
-        
-        var x = processedPayslipDatas.Select(p =>
-            new
-            {
-                p.EmployeeCode,
-                p.Year,
-                p.Quarter
-            });
-
-        var processedDisbursementDatas = processedDisbursementData.ToList();
-        
-        var y = processedDisbursementDatas.Select(p =>
-            new
-            {
-                p.EmployeeCode,
-                p.Year,
-                p.Quarter
-            });
-
-        var employeePeriods = x.Union(y).Distinct();
-
+        var employeePeriods = _employeePeriodProcessor.GetPeriods(processedPayslipData, processedDisbursementData);
+            
         var results = (from period in employeePeriods
-        let disbursementData = processedDisbursementDatas.FirstOrDefault(d => d.EmployeeCode == period.EmployeeCode && d.Year == period.Year && d.Quarter == period.Quarter)
-        let payslipData = processedPayslipDatas.FirstOrDefault(p => p.EmployeeCode == period.EmployeeCode && p.Year == period.Year && p.Quarter == period.Quarter)
+        let disbursementData = processedDisbursementData.FirstOrDefault(d => d.EmployeeCode == period.EmployeeCode && d.Year == period.Year && d.Quarter == period.Quarter)
+        let payslipData = processedPayslipData.FirstOrDefault(p => p.EmployeeCode == period.EmployeeCode && p.Year == period.Year && p.Quarter == period.Quarter)
         select new VerificationResult()
         {
             EmployeeCode = period.EmployeeCode,
@@ -96,7 +61,5 @@ public class DisbursementsVerifier : IDisbursementsVerifier
         }).ToList();
 
         return results.OrderBy(q => q.EmployeeCode).ThenBy(q => q.Year).ThenBy(q => q.Quarter);
-        
-        //return query.OrderBy(q => q.EmployeeCode).ThenBy(q => q.Year).ThenBy(q => q.Quarter);
     }
 }
