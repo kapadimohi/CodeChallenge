@@ -72,6 +72,16 @@ To debug, run debugger in the IDE while LocalStack is running
 1. Used a WebApi to complete this challenge keeping in line with micro services architecture. A console application would have sufficed, however, ideally such an application would normally be an api i.e be consumed by a UI or another service. A lambda was also considered but not pursued due to complexity and scaling issues due to a max time limit of 15minutes, which would make it less than ideal in real work situations.
 
 
+2. Approach to solving the business problem. 
+   
+    - Retrieving each set of the spreadsheet and mapping it into a different POCO
+    - Avoided any business logic at the repository level and raw data might be use for other use cases currently not defined
+    - PayslipDetails data was then grouped into Employee Code, Year and Quarter. DateTime extension method was created to easily identify the quarter for which the payslip was for. During this process, all the Non Ote transactions were filtered out of the dataset
+    - Disbursements data was then also grouped into Employee Code, Year and Quarter. A different DateTime extension method was created to identify the quarter for which the payment was for. This is because of a business rule described in the challenge that even a payment made within 28 days into the next quarter, it should still be attributed to the previous quarter 
+    - The goal was to have the same key for both sets of data (EmployeeCode, Year and Quarter) which then can be used to combine the data together using Linq or something similar
+    - 
+
+
 2. Use of AWS LocalStack. Initially the application just used local file system for IO. However, I decided to change it to use LocalStack instead since this will closely match the real work situation. Disbursement files are likely to be stored on S3 and its best to integrate with S3 locally as well. All that will be needed to make this work on Production is Production AWS credentials and S3 service URL. Rest should just work.
 
 
@@ -82,3 +92,9 @@ To debug, run debugger in the IDE while LocalStack is running
 
 
 5. Comments are kept at a minimum. Code should ideally be self documenting with good usage of variable and method names e.g. MergePayslipAndDisbursementData does exactly what it says. A couple of exceptions are in the SuperCalculator where it made sense to me to include all the historical and future rates of Super for reference purposes. Another place for comments are in the DateTime extensions. There are 2 different ways of calculating "Quarterly" for this application and I believe it made sense to differentiate them with comments since it is not obvious. 
+
+
+6. Logging has also been used where appropriate to define entry points into controllers and other "important" functions. This helps with traceability/monitoring if things need to be debugged in production. 
+
+
+7. 
