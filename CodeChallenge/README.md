@@ -90,10 +90,11 @@ To debug, run debugger in the IDE while LocalStack is running.
     - First step was to determine the distinct periods (EmployeeCode, Year and Quarter) across both sets of data
     - Then fill in the relevant details from both sets of data 
     - Inner joins and left outer joins cannot be used for this purpose
-    - HashSet was considered but not used in this case
+    - HashSet was considered but not used in this case and can be considered as an enhancement to the current solution
+    - Finally based on the payslip and disbursement data, the variance is calculated
 
 
-2. Use of AWS LocalStack. Initially the application just used local file system for IO. However, I decided to change it to use LocalStack instead since this will closely match the real work situation. Disbursement files are likely to be stored on S3 and its best to integrate with S3 locally as well. All that will be needed to make this work on Production is Production AWS credentials and S3 service URL. Rest should just work.
+2. Use of AWS LocalStack. Initially the application just used local file system for File IO. However, I decided to change it to use LocalStack instead since this will closely match the real work situation. Disbursement files are likely to be stored on S3 and its best to integrate with S3 locally as well. All that will be needed to make this work on Production is Production AWS credentials and S3 service URL. Rest should just work.
 
 
 3. Implemented a simple 3 tier application. Program entry is via the controller which takes in the name of the file that needs to be assessed, which then hands over to a service which orchestrates the retrieval of multiple sheets of data from the repositories and business logic to calculate the Disbursement variances. 
@@ -108,4 +109,4 @@ To debug, run debugger in the IDE while LocalStack is running.
 6. Logging has also been used where appropriate to define entry points into controllers and other "important" functions. This helps with traceability/monitoring if things need to be debugged in production. 
 
 
-7. 
+7. Other things such as exception middlewares and returning appropriate ProblemDetail messages from the api were considered but not implemented for this challenge. 
